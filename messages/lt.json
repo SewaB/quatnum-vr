@@ -1,0 +1,127 @@
+{
+  "navbar": {
+    "about": "Apie mus",
+    "price": "Kaina",
+    "certificate": "Sertifikatas",
+    "event": "Renginys",
+    "contacts": "Kontaktai",
+    "book": "Užsakyti"
+  },
+  "hero": {
+    "title": "Įženkite į kitą",
+    "subtitle": "realybę",
+    "button": "Eikime"
+  },
+  "about": {
+    "title": "Apie VR",
+    "text": "Virtuali realybė yra moderni pramonė, kuri aktyviai vystosi. Virtualios realybės naudojimas tampa vis platesnis ir įvairesnis. Žmonės VR dažnai asocijuojasi tik su pramogomis, tačiau ši mintis klaidinga. Pramogos yra tik viena sritis, kurioje galima naudoti VR.<br/><br/>Iš tikrųjų virtualios realybės galimybės yra daug platesnės. VR aktyviai naudojamas moksliniuose tyrimuose, pramonėje ir švietime. Tačiau, žinoma, neturėtume pamiršti ir pramogų. Virtualios realybės žaidimų klubas yra puiki vieta intensyviam laisvalaikiui už prieinamą kainą. Vienas specialus šalmas gali perkelti jus į nuostabų naują pasaulį, kupiną netikėtumų, ir sukurti visiškai tikroviško panirimo į įvykius iliuziją.<br/><br/>Žaisti pažįstamus kompiuterinius žaidimus ir pasinerti į tikrovišką pasaulį su nuostabiais nuotykiais yra visiškai skirtingi dalykai."
+  },
+  "advantages": {
+    "title": "Mūsų privalumai",
+    "multiplayer": "Kelių žaidėjų",
+    "treadmills": "Bėgimo takeliai",
+    "flightSimulator": "Skrydžio simulatorius",
+    "freeRoaming": "Laisvas judėjimas",
+    "catering": "Užkandžiai",
+    "vrGuns": "VR šautuvai",
+    "raceSimulator": "Lenktynių simulatorius",
+    "vrEscaperoom": "VR pabėgimo kambarys"
+  },
+  "descirption": {
+    "title": "VR ypatumai",
+    "playLearnConnect": "Žaisk, Mokykis, Junkis",
+    "playLearnConnectText": "Čia susitinka žaidimai ir mokymasis. Nuo įdomių žaidimų iki edukacinių nuotykių, viskas siejasi su puikiai praleistu laiku, kuris išplečia jūsų akiratį.",
+    "experienceFuture": "Patirkite ateitį, šiandien",
+    "experienceFutureText": "Įženkite į pasaulį, kur jūsų pašėlusios fantazijos taps tikrove, o realybės ribos nustumiamos kiek leidžia galimybės.",
+    "noLimits": "Jokių ribų",
+    "noLimitsText": "Įženkite į naują lygmenį. Mes darome neįprastą įprastu, suteikdami jums galimybę pasinerti į ateitį jau dabar.",
+    "muchEasier": "Daug paprasčiau nei įprastas žaidimai",
+    "muchEasierText": "Atraskite pasaulį, kuris įtrauks jūs į linksmybes. Patirtis nereikalinga. Tiesiog atsineškite savo smalsumą, entuziazmą ir gerą nuotaiką, o mes pasirūpinsime visu kitu!"
+  },
+  "games": {
+    "title": "Geriausiai įvertinti žaidimai",
+    "subtitle": "Daugiau nei 100 žaidimų yra prieinami. Tiek vaikams, tiek suaugusiems",
+
+    "beatSaber": "BeatSaber",
+    "beatSaberText": "BeatSaber yra VR ritmo žaidimas, kuriame pjoviate ritmus, skrendančius link jūsų, supažindinti su futuristiniu pasauliu, nusifotografavus į jį.",
+    "arizonaSunshine": "Arizona Sunshine",
+    "arizonaSunshineText": "Keturių draugų komanda, išgyvenusi žombių apokalipsį. Išgyvenkite naudodami ginklus tikraisiais judesiais ir tyrinėkite postapokaliptinį pasaulį VR. Mirusiuosius padėti pailsėti dabar yra dar įdomiau nei bet kada.",
+    "halfLifeAlyx": "Half-Life: Alyx",
+    "halfLifeAlyxText": "Tai jūsų galimybė tiesiogiai tapti Half-Life visateisės dalimi. Žaidimas įgyvendintas ypatingai - su įtraukiančia siužeto linija, nuostabiais grafiniais vaizdais ir įdomiais uždaviniais! Nepaprastai įvairi technologija, gravitacinės pirštinės, įvairūs ginklai. Ir svarbiausia - pagonys priešais!",
+    "fancySkiing": "Fancy Skiing",
+    "fancySkiingText": "Įkvepiantis virtualaus kalnų slidinėjimo žaidimas, kuris žaidėjus nuskuba į sniego nuošales, kad suteiktų įtraukiantį ir linksminantį slidinėjimo patyrimą. Su nuostabiais grafiniais vaizdais ir intuityviais valdymo būdais žaidėjai gali nusileisti nuo kalno, atlikti įspūdingus triukus ir nugalėti iššūkius kelionėje.",
+    "seriousSam": "Serious Sam",
+    "seriousSamText": "Glorifikuotas grįžimas prie pirmojo asmens šaudyklės auksinio laikotarpio, kai vyrai buvo vyrai, užmaskuoti buvo pradedantieji, o spustelėjus mygtuką viskas eksploduodavo.",
+    "phasmophobia": "Phasmophobia",
+    "phasmophobiaText": "Paranormalinė veikla auga, ir jums ir jūsų komandai tenka naudoti visus jūsų prieinamus pragarų medžioklės įrankius, kad galėtumėte rinkti kuo daugiau įrodymų.",
+    "locoDojo": "Loco Dojo",
+    "locoDojoText": "Įženkite į keistą medinį Loco Dojo pasaulį! Atraskite gausybę pašėlusių naudojimo būdų VR, paeiliui verčiant ratą centriniame stalo žaidime ir paleisdami vieną iš šešiolikos nuostabiųjų šauniųjų žaidimų, kuriuose konkuruosite su savo varžovais, siekdami uždirbti didžiojo Sensei palankumą."
+  },
+  "rules": {
+    "title": "Taisyklės",
+
+    "noAlcohol": "Susilaikykite nuo alkoholio",
+    "noAlcoholText": "Apsvaige nuo alkoholio ar narkotikų asmenys bus neįleidžiami",
+    "badEyesight": "Blogas regėjimas",
+    "badEyesightText": "Jei turite prastą regėjimą, rekomenduojame dėvėti kontaktinius lęšius maksimaliam patogumui",
+    "accompanyingChildren": "Vaikai iki 12 metų",
+    "accompanyingChildrenText": "Vaikams iki 12 metų privalomą, bent vieno iš tėvų priežiūra",
+    "pregnant": "Nėščioms",
+    "pregnantText": "Nerekomenduojame žaisti nėščioms ir emociškai pažeidžiamiems asmenims"
+  },
+  "photo": {
+    "title": "Mūsų Klubas"
+  },
+  "price": {
+    "title": "Kaina",
+    "subtitle": "Nuolaida! 50% visoms paslaugoms klubo atidarymo proga!",
+    "vrSessionTitle": "VR Seansas",
+    "vrSessionDuration": "1 asmuo | 60 min.",
+    "vrSessionButton": "Žaisti",
+    "giftCardTitle": "Dovanų Kortelė",
+    "giftCardDuration": "1 asmuo | 60 min.",
+    "giftCardButton": "Pirkti",
+    "eventTitle": "Renginys",
+    "eventInfo1": "Įmonės | Renginys | Gimtadienis",
+    "eventInfo2": "Iki 15 žmonių",
+    "eventButton": "Užsakyti",
+
+    "modalTitle": "Užsisakykite renginį",
+    "phone": "Telefonas",
+    "name": "Vardas",
+    "date": "Data",
+    "address": "Adresas",
+    "comment": "Komentaras",
+    "commentPlaceholder": "Žmonių skaičius arba kitas komentaras",
+    "button": "Patvirtinti"
+  },
+  "booking": {
+    "title": "Užsakymas"
+  },
+  "reviews": {
+    "title": "Nustatymai klientų atsiliepimai",
+    "reviewTitle1": "Dukra džiaugiasi",
+    "reviewText1": "šiandieną lankėmės su dukra, liko labai patenkinta ❤️ Sėkmės Jums",
+    "reviewTitle2": "Proto Kilimas!",
+    "reviewText2": "Aš šokau ant svetimų planetų ir lenktyniaujau per ateitį. Jų modeliavimo detalumo lygis yra neįtikėtinas",
+    "reviewTitle3": "Tiesiog puiku!",
+    "reviewText3": "Sūnus mane įtikino apsilankyti šiame klube. Seniai nebuvo taip smagu",
+    "reviewTitle4": "Adrenalino Šuolis",
+    "reviewText4": "Tai mano numylėta vieta adrenalinui. Džiaugsmas dėl virtualių kulkų išvengimo ir susidurimo su žombių hordomis yra bekonkuris. Tai treniruotė ir nuotykis viename. Kiekvieną kartą išeinu su supratingu širdies plakimu!",
+    "reviewTitle5": "Žaidėjų Rojus",
+    "reviewText5": "Kaip visą gyvenimą žaidęs žaidėjas, galvojau, kad viską jaučiau, bet Wow VR žaidimus nuvedė į visiškai naują lygį. Tai lyg gyventum savo mėgstamiausiuose žaidimuose. Patirties įvairovė yra nuostabi. Tai žaidėjų rojus, kaip aš!",
+    "reviewTitle6": "Puikus laikas poroms",
+    "reviewText6": "Atėjome žaisti VR su mano vaikinu. Labai maloni patirtis.",
+    "reviewTitle7": "WOW",
+    "reviewText7": "Kažkas neįtikėtino. Rekomenduoju visiems"
+  },
+
+  "contacts": {
+    "title": "Kontaktai",
+    "workingHours": "Darbo laikas",
+    "address": "Adresas",
+    "phone": "Telefonas",
+    "email": "El. paštas",
+    "club": "klubas"
+  }
+}

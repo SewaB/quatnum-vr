@@ -1,0 +1,125 @@
+{
+  "navbar": {
+    "about": "About",
+    "price": "Price",
+    "certificate": "Certificate",
+    "event": "Event",
+    "contacts": "Contacts",
+    "book": "Book"
+  },
+  "hero": {
+    "title": "Enter another",
+    "subtitle": "reality",
+    "button": "Let's go"
+  },
+  "about": {
+    "title": "About VR",
+    "text": "Virtual reality is a modern industry that is actively developing. The use of virtual reality is becoming wider and more diverse. People often associate VR solely with entertainment, but this idea is wrong. Entertainment is just one area where VR can be used.<br/><br/>In reality, the possibilities of Virtual Reality are much wider. VR is actively used in scientific research, industry and education. However, of course, we should not forget about entertainment. The virtual reality gaming club is an excellent place for intense leisure time at affordable prices. One special helmet can transport you to an amazing new world, full of surprises, and create the illusion of complete realistic immersion in events.<br/><br/>Playing familiar computer games and immersing yourself in a realistic world with amazing adventures are completely different things."
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "multiplayer": "Multiplayer",
+    "treadmills": "Treadmills",
+    "flightSimulator": "Flight simulator",
+    "freeRoaming": "Free roaming",
+    "catering": "Catering",
+    "vrGuns": "VR guns",
+    "raceSimulator": "Race simulator",
+    "vrEscaperoom": "VR Escaperoom"
+  },
+  "descirption": {
+    "title": "Peculiarities of VR",
+    "playLearnConnect": "Play, Learn, Connect",
+    "playLearnConnectText": "Play and learning collide here. From thrilling games to educational adventures, it's all about having a blast while expanding your horizons.",
+    "experienceFuture": "Experience the Future, Today",
+    "experienceFutureText": "Step into a world where your wildest dreams come true, and the boundaries of reality are pushed to their limits.",
+    "noLimits": "No limits",
+    "noLimitsText": "Step into a new dimension. We make the extraordinary ordinary, giving you a taste of the future right now.",
+    "muchEasier": "Much easier than regular gaming",
+    "muchEasierText": "Discover a world of immersive fun. No experience needed. Just bring your curiosity and enthusiasm. We'll take care of the rest!"
+  },
+  "games": {
+    "title": "Top Rated Games",
+    "subtitle": "More than 100 games available. For kids, for adults",
+    "beatSaber": "BeatSaber",
+    "beatSaberText": "BeatSaber is a VR rhythm game where you slash the beats of adrenaline-pumping music as they fly towards you, surrounded by a futuristic world.",
+    "arizonaSunshine": "Arizona Sunshine",
+    "arizonaSunshineText": "Team of 4 fellow survivors in the midst of a zombie apocalypse. Survive by handle weapons with real-life movements, and explore a post-apocalyptic world in VR. Putting the undead back to rest is more thrilling than ever before.",
+    "halfLifeAlyx": "Half-Life: Alyx",
+    "halfLifeAlyxText": "This is your chance to literally become a part of the Half-Life universe. The game is implemented at its coolest - with an engaging storyline, stunning graphics, and intriguing puzzles! Incredibly diverse technology, gravity gloves, various weapons. And most importantly - hordes of enemies!",
+    "fancySkiing": "Fancy Skiing",
+    "fancySkiingText": "Exhilarating virtual reality skiing game that transports players to the snowy slopes for an immersive and fun skiing experience. With stunning graphics and intuitive controls, players can navigate downhill, perform thrilling stunts, and conquer challenging slopes.",
+    "seriousSam": "Serious Sam",
+    "seriousSamText": "A glorious throwback to the golden age of first-person shooters where men were men, cover was for amateurs and pulling the trigger made things go boom.",
+    "phasmophobia": "Phasmophobia",
+    "phasmophobiaText": "Paranormal activity is on the rise and it's up to you and your team to use all the ghost-hunting equipment at your disposal in order to gather as much evidence as you can.",
+    "locoDojo": "Loco Dojo",
+    "locoDojoText": "Enter the whimsical wooden world of Loco Dojo! Discover a wealth of wacky uses for VR, taking it in turns to spin the wheel of a central board game and launch one of sixteen marvellously mad minigames in which to compete with your rivals for Grand Sensei's favour."
+  },
+  "photo": {
+    "title": "Our Club"
+  },
+  "rules": {
+    "title": "Rules",
+
+    "noAlcohol": "No Aclohol",
+    "noAlcoholText": "Please refrain from visiting the club while under the influence of alcohol or drugs",
+    "badEyesight": "Bad eyesight",
+    "badEyesightText": "If you have poor vision, we recommend wearing contact lenses for maximum comfort.",
+    "accompanyingChildren": "Accompanying children",
+    "accompanyingChildrenText": "Children under the age of 12 can only be in the club accompanied by at least one adult guardian",
+    "pregnant": "Pregnant",
+    "pregnantText": "We strongly do not recommend playing for pregnant and emotionally vulnerable people"
+  },
+  "price": {
+    "title": "Price",
+    "subtitle": "Discount! 50% on all services in honor of the opening of the club!",
+    "vrSessionTitle": "VR Session",
+    "vrSessionDuration": "1 person | 60 min",
+    "vrSessionButton": "Play",
+    "giftCardTitle": "Gift card",
+    "giftCardDuration": "1 person | 60 min",
+    "giftCardButton": "Buy",
+    "eventTitle": "Event",
+    "eventInfo1": "Corporate | Event | Birthday",
+    "eventInfo2": "Up to 15 people",
+    "eventButton": "More info",
+
+    "modalTitle": "Book an Event",
+    "phone": "Phone",
+    "name": "Name",
+    "date": "Date",
+    "address": "Address",
+    "comment": "Comment",
+    "commentPlaceholder": "Amount of people, or any other comments",
+    "button": "Confirm"
+  },
+  "booking": {
+    "title": "Booking"
+  },
+  "reviews": {
+    "title": "Our Clients Reviews",
+    "reviewTitle1": "Daughter is happy",
+    "reviewText1": "today we visited with our daughter, she was very satisfied ❤️ Good luck to you",
+    "reviewTitle2": "A Mind-Bending Escape!",
+    "reviewText2": "I've danced on alien planets and raced through the future. The level of detail in their simulations is incredible",
+    "reviewTitle3": "Just great",
+    "reviewText3": "My son convinced me to visit this club. It hasn't been this much fun in a long time",
+    "reviewTitle4": "An Adrenaline Rush",
+    "reviewText4": "This is my go-to place for an adrenaline rush. The thrill of dodging virtual bullets and facing zombie hordes is unmatched. It's a workout and an adventure rolled into one. I leave with a racing heart every time!",
+    "reviewTitle5": "Gamers' Paradise",
+    "reviewText5": "As a lifelong gamer, I thought I'd seen it all, but Wow VR took gaming to a whole new level. It's like living inside your favorite games. The variety of experiences is mind-boggling. It's a paradise for gamers like me!",
+    "reviewTitle6": "Great time for couples",
+    "reviewText6": "We came to play VR with my boyfriend. Very pleasant experience.",
+    "reviewTitle7": "WOW",
+    "reviewText7": "Something incredible. I recommend it to everyone"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "workingHours": "Working hours",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "club": "club"
+  }
+}
