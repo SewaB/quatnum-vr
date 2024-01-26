@@ -23,18 +23,21 @@ export default function Footer() {
 
           minWidth: '300px',
           p: 4,
-          pt: 3,
-          pb: 2,
+          py: 3,
           gap: '0.5rem',
 
           position: { md: 'absolute' },
           right: '5rem',
-          top: '3.5rem',
+          top: '5rem',
 
-          backgroundColor: { md: '#3a7e67' },
+          background: 'linear-gradient(90deg, #2f2f33, #14161a)',
           borderRadius: { md: '1rem' },
           color: '#fff',
-          zIndex: 1
+          zIndex: 1,
+
+          boxShadow: {
+            md: 'inset 0px 0px 6px -1px #f7038c, 0px 0px 6px -1px #f7038c'
+          }
         }}
       >
         <Typography
@@ -42,7 +45,8 @@ export default function Footer() {
           gutterBottom
           sx={{
             fontSize: { xs: '1.8rem', tb: '2.4rem' },
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            color: '#f8bdc7'
           }}
         >
           {t('title')}
@@ -68,30 +72,17 @@ export default function Footer() {
 
           <Box sx={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
             <RoomIcon />
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-              {/* <Typography gutterBottom>{t('address')}</Typography> */}
-              <Typography
-                gutterBottom
-                component='a'
-                href='https://maps.app.goo.gl/qAgYH9gsYzzjJELL6'
-                target='_blank'
-                referrerPolicy='no-referrer'
-              >
-                <b>WOW VR {t('club')}</b>
-                <br />
-                Šopeno g. 5. Vilnius
-              </Typography>
-              <Typography
-                component='a'
-                href='https://maps.app.goo.gl/MbgFtKnjG8FA9tUJ6'
-                target='_blank'
-                referrerPolicy='no-referrer'
-              >
-                <b>Max Fun VR {t('club')}</b>
-                <br />
-                Naugarduko g. 41. Vilnius
-              </Typography>
-            </Box>
+            <Typography
+              component='a'
+              href='https://maps.app.goo.gl/NshoFpUCBcsRvVXD9'
+              target='_blank'
+              referrerPolicy='no-referrer'
+            >
+              {/* {t('address')} */}
+              {t('addressMetro')}
+              <br />
+              <b>{t('addressCity')}</b>
+            </Typography>
           </Box>
         </Box>
         <Box
@@ -107,20 +98,23 @@ export default function Footer() {
             <CallIcon />
             <div>
               <Typography>{t('phone')}</Typography>
-              <Typography component='a' href='tel:37062264360'>
-                <b>+370 62 26 4 360</b>
+              <Typography
+                component='a'
+                //</div>href='tel:37062264360'
+              >
+                <b>+380 00 00 0 000</b>
               </Typography>
             </div>
           </Box>
-          {/* <Box sx={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+          <Box sx={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
             <EmailIcon />
             <div>
               <Typography>{t('email')}</Typography>
               <Typography component='a' href='mailto:@gmail.com'>
-                wowvr@gmail.com
+                <b>quantumvr@gmail.com</b>
               </Typography>
             </div>
-          </Box> */}
+          </Box>
         </Box>
 
         <Socials />
@@ -128,20 +122,19 @@ export default function Footer() {
 
       <Box
         sx={{
-          // filter: 'hue-rotate(300deg)',
+          filter: 'hue-rotate(300deg)',
           height: { xs: '60vh', md: '70vh' },
           maxHeight: '700px'
-          // opacity: 0.875
         }}
       >
         <iframe
-          src='https://www.google.com/maps/d/embed?mid=1QmLb3aibIvCoX2SaCR3z-KxGLjYjhE0&ehbc=2E312F&noprof=1'
+          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16374.060514215302!2d30.489435491875746!3d50.463394282938275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce7a03bf537f%3A0x17dcca88cc887811!2sTatarska%20St%2C%201%D0%92%2C%201V%2C%20Kyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2sge!4v1705869117918!5m2!1sen!2sge'
+          title='map'
           width='100%'
           height='100%'
           allowFullScreen=''
           loading='lazy'
           referrerPolicy='no-referrer-when-downgrade'
-          title='map'
         />
       </Box>
     </Box>

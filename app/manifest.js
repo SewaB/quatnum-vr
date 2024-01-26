@@ -1,9 +1,9 @@
 export default function manifest() {
   return {
-    name: 'WOW VR',
-    short_name: 'WOW VR',
+    name: 'QuantumVR',
+    short_name: 'QuantumVR',
     description:
-      'The first VR club in Lithuania with the latest virtual reality headsets Oculus Quest 3. A vast library of games for every taste and age of players. Single and team games. Games in virtual, mixed, and augmented reality.',
+      'Зануртеся в світ нескінченних вражень в QuantumVR, де Віртуальна Реальність зустрічає душу Києва. Випустіть ексцитацію за допомогою захоплюючих симуляцій, мультиплеєрних ігор та футуристичних пригод.',
     start_url: '/',
     icons: [
       {

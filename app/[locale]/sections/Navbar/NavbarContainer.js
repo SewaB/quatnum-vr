@@ -2,11 +2,14 @@
 import React from 'react'
 import Image from 'next/image'
 
+import MenuItem from '@mui/material/MenuItem'
+import Select from '@mui/material/Select'
+
 import AppBar from '@mui/material/AppBar'
 import Button from '@mui/material/Button'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
-import Slide from '@mui/material/Slide'
+import Fade from '@mui/material/Fade'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import IconButton from '@mui/material/IconButton'
@@ -20,6 +23,9 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import Socials from '../../components/Socials'
 import Link from 'next-intl/link'
+import CallIcon from '@mui/icons-material/Call'
+import Typography from '@mui/material/Typography'
+
 export default function NavbarContainer({ content, locale }) {
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
@@ -28,33 +34,33 @@ export default function NavbarContainer({ content, locale }) {
   }
   const navitems = [
     { title: content.about, id: 'about' },
+    { title: content.games, id: 'games' },
     { title: content.price, id: 'price' },
     { title: content.certificate, id: 'price' },
     { title: content.event, id: 'price' },
+    { title: content.faq, id: 'faq' },
     { title: content.contacts, id: 'contacts' }
   ]
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      {/* <Button
+      <Button
         href='#header'
         variant='text'
         sx={{
-          height: 40,
-          width: '140px',
-          my: 2
+          my: 1
         }}
       >
         <Image
-          src='/logoText.svg'
-          priority
+          src='/logo.svg'
           quality={100}
-          fill
+          width={120}
+          height={38}
           alt=''
           style={{ objectFit: 'contain' }}
         />
-      </Button> */}
-      <List>
+      </Button>
+      <List sx={{ p: 0 }}>
         {navitems.map((item) => (
           <ListItem key={item.title} disablePadding>
             <ListItemButton sx={{ color: '#fff' }} href={'#' + item.id}>
@@ -64,139 +70,288 @@ export default function NavbarContainer({ content, locale }) {
         ))}
       </List>
 
+      <Box sx={{ display: 'flex', px: 1 }}>
+        <Select
+          value={locale}
+          inputProps={{
+            MenuProps: {
+              disableScrollLock: true,
+              sx: {
+                '.MuiPaper-root': {
+                  backgroundColor: 'rgba(0,0,0,0.5)'
+                }
+              }
+            }
+          }}
+          IconComponent={() => null}
+          sx={{
+            borderRadius: 0,
+            '.MuiSelect-select': {
+              border: '0',
+              p: '0!important',
+              borderRadius: 0,
+              fontSize: '1rem',
+              '.MuiButtonBase-root': {
+                color: '#fff',
+                fontWeight: { md: 'bold' }
+              }
+            },
+            '.MuiOutlinedInput-notchedOutline': {
+              display: 'none'
+            }
+          }}
+        >
+          <MenuItem value='ua'>
+            <Link href='/' locale='ua'>
+              <NavbarItem lang>UA</NavbarItem>
+            </Link>
+          </MenuItem>
+          <MenuItem value='en'>
+            <Link href='/' locale='en'>
+              <NavbarItem lang>EN</NavbarItem>
+            </Link>
+          </MenuItem>
+          <MenuItem value='ru'>
+            <Link href='/' locale='ru'>
+              <NavbarItem lang>RU</NavbarItem>
+            </Link>
+          </MenuItem>
+        </Select>
+      </Box>
+
       <Socials />
     </Box>
   )
 
   return (
     <>
-      <HideOnScroll>
-        <AppBar
-          component='nav'
-          position='fixed'
-          sx={{
-            bgcolor: '#19191e',
-            boxShadow: 'unset',
-            top: '15px',
-            left: 0,
-            margin: 'auto',
-            maxWidth: 800,
-            borderRadius: '12px'
-          }}
-        >
-          <Container maxWidth='lg' disableGutters={true}>
-            <Toolbar
+      <AppBar
+        component='nav'
+        position='fixed'
+        sx={{
+          backgroundColor: 'rgba(47, 47, 51, 0.7)',
+          backdropFilter: 'blur(4px)'
+        }}
+      >
+        <Container maxWidth='xl' disableGutters={true}>
+          <Toolbar
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              '& a': {
+                fontSize: '1rem'
+              }
+            }}
+          >
+            <Box
               sx={{
-                display: 'flex',
-                justifyContent: 'center'
+                mr: 'auto',
+                display: 'flex'
               }}
             >
               <Box
                 sx={{
-                  mr: 'auto'
+                  display: {
+                    xs: 'flex',
+                    sm: 'none',
+                    gap: '0.5rem',
+                    alignItems: 'center'
+                  }
                 }}
               >
-                <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                  <IconButton
-                    color='inherit'
-                    aria-label='open drawer'
-                    edge='start'
-                    onClick={handleDrawerToggle}
-                  >
-                    <MenuIcon />
-                  </IconButton>
-
-                  {/* <Button
-                    href='#header'
-                    variant='text'
-                    sx={{
-                      display: { md: 'none' },
-                      color: '#fff',
-                      textTransform: 'capitalize'
-                    }}
-                  >
-                    <Image
-                      src='/logoText.svg'
-                      priority
-                      quality={100}
-                      width={130}
-                      height={40}
-                      alt=''
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </Button> */}
-                </Box>
-
-                <Box
-                  sx={{
-                    display: { xs: 'none', md: 'flex' }
-                  }}
+                <IconButton
+                  color='inherit'
+                  aria-label='open drawer'
+                  edge='start'
+                  onClick={handleDrawerToggle}
                 >
-                  <NavbarItem link='#price'>{content.price}</NavbarItem>
-                  <NavbarItem link='#price'>{content.certificate}</NavbarItem>
-                  <NavbarItem link='#price' noBorder>
-                    {content.event}
-                  </NavbarItem>
-                </Box>
+                  <MenuIcon />
+                </IconButton>
+                <Image
+                  src='/logo.svg'
+                  priority
+                  quality={100}
+                  width={120}
+                  height={38}
+                  alt=''
+                  style={{ objectFit: 'contain' }}
+                />
               </Box>
 
-              <Box sx={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <Box
-                  sx={{
-                    display: { xs: 'none', md: 'initial' }
+              <Button
+                href='#header'
+                variant='text'
+                sx={{
+                  display: { xs: 'none', sm: 'flex' },
+                  p: 0,
+                  mr: 1
+                }}
+              >
+                <Image
+                  src='/logo.svg'
+                  priority
+                  quality={100}
+                  width={155}
+                  height={40}
+                  alt=''
+                  style={{ objectFit: 'contain' }}
+                />
+              </Button>
+
+              <Box
+                sx={{
+                  display: { xs: 'none', md: 'flex' }
+                }}
+              >
+                <NavbarItem link='#about' mainColor hidden>
+                  {content.about}
+                </NavbarItem>
+                <NavbarItem link='#price' mainColor>
+                  {content.price}
+                </NavbarItem>
+                <NavbarItem link='#price' mainColor>
+                  {content.event}
+                </NavbarItem>
+                <NavbarItem link='#price' mainColor>
+                  {content.certificate}
+                </NavbarItem>
+                <NavbarItem link='#games' mainColor hidden>
+                  {content.games}
+                </NavbarItem>
+                <NavbarItem link='#faq' mainColor hidden>
+                  {content.faq}
+                </NavbarItem>
+                <NavbarItem link='#contacts' mainColor>
+                  {content.contacts}
+                </NavbarItem>
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: { xs: '0.9rem', lg: '1.5rem' }
+              }}
+            >
+              <Typography
+                component='a'
+                href='tel:38000000'
+                sx={{
+                  display: { xs: 'none', sm: 'flex' },
+                  gap: '0.5rem',
+                  alignItems: 'center',
+                  '&:hover': {
+                    color: '#ec318a'
+                  }
+                }}
+              >
+                <CallIcon fontSize='small' />
+                +380 00 00 0 000
+              </Typography>
+              <Button
+                href='#booking'
+                sx={{
+                  color: '#000',
+                  textTransform: 'capitalize',
+                  backgroundColor: '#fcd222',
+                  fontWeight: 'bold',
+                  position: 'relative',
+                  borderRadius: 0,
+                  py: { xs: 0.5, sm: 0.75 },
+                  px: 2,
+                  minWidth: '140px',
+                  clipPath:
+                    'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)',
+
+                  //
+                  // '&:after': {
+                  //   content: "''",
+                  //   position: 'absolute',
+                  //   backgroundColor: 'red',
+                  //   transform: 'translate(10px, -10px)',
+                  //   width: '100%',
+                  //   height: '100%',
+                  //   opacity: 1,
+                  //   clipPath:
+                  //     'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)'
+                  // },
+
+                  '&:hover': {
+                    color: '#fff',
+                    backgroundColor: '#ec318a',
+                    // boxShadow: '0px 0px 2rem 0px #fff',
+                    '&:after': {
+                      opacity: 1
+                    }
+                  }
+                }}
+              >
+                {content.book}
+              </Button>
+
+              <Box
+                sx={{
+                  display: { xs: 'none', sm: 'flex' }
+                }}
+              >
+                <Select
+                  value={locale}
+                  inputProps={{
+                    MenuProps: {
+                      disableScrollLock: true,
+                      sx: {
+                        '.MuiPaper-root': {
+                          backgroundColor: 'rgba(0,0,0,0.5)'
+                        }
+                      }
+                    }
                   }}
-                >
-                  <NavbarItem link='#about'>{content.about}</NavbarItem>
-
-                  <NavbarItem link='#contacts' noBorder>
-                    {content.contacts}
-                  </NavbarItem>
-                </Box>
-
-                {/* {locale === 'en' ? (
-                  <Link href='/' locale='lt'>
-                    <NavbarItem noBorder lang>
-                      <Image src='/lt.svg' alt='' width={24} height={24} />
-                    </NavbarItem>
-                  </Link>
-                ) : (
-                  <Link href='/' locale='en'>
-                    <NavbarItem noBorder lang>
-                      <Image src='/gb.svg' alt='' width={24} height={24} />
-                    </NavbarItem>
-                  </Link>
-                )} */}
-
-                <Button
-                  href='#booking'
-                  variant='text'
+                  IconComponent={() => null}
                   sx={{
-                    color: '#f3c82e',
-                    textTransform: 'capitalize',
-                    backgroundColor: 'transparent',
-                    fontWeight: 'bold',
-                    border: '2px solid transparent',
-                    py: { xs: 0.5, sm: 0.75 },
-                    '&:hover': {
-                      // color: '#fbdd54',
-                      borderColor: '#f3c82e'
+                    borderRadius: 0,
+                    '.MuiSelect-select': {
+                      border: '0',
+                      p: '0!important',
+                      borderRadius: 0,
+                      '.MuiButtonBase-root': {
+                        color: '#fff',
+                        fontWeight: { md: 'bold' }
+                      }
+                    },
+                    '.MuiOutlinedInput-notchedOutline': {
+                      display: 'none'
                     }
                   }}
                 >
-                  {content.book}
-                </Button>
+                  <MenuItem value='ua'>
+                    <Link href='/' locale='ua'>
+                      <NavbarItem lang>UA</NavbarItem>
+                    </Link>
+                  </MenuItem>
+                  <MenuItem value='en'>
+                    <Link href='/' locale='en'>
+                      <NavbarItem lang>EN</NavbarItem>
+                    </Link>
+                  </MenuItem>
+                  <MenuItem value='ru'>
+                    <Link href='/' locale='ru'>
+                      <NavbarItem lang>RU</NavbarItem>
+                    </Link>
+                  </MenuItem>
+                </Select>
               </Box>
-            </Toolbar>
-          </Container>
-        </AppBar>
-      </HideOnScroll>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
       <nav>
         <Drawer
           variant='temporary'
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true // Better open performance on mobile.
+            keepMounted: true
           }}
           sx={{
             display: { xs: 'block', md: 'none' },
@@ -210,37 +365,53 @@ export default function NavbarContainer({ content, locale }) {
           {drawer}
         </Drawer>
       </nav>
+      <BookButton>{content.book}</BookButton>
     </>
   )
 }
 
-function HideOnScroll(props) {
+function BookButton(props) {
   const { children } = props
-  const trigger = useScrollTrigger()
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 700
+  })
 
   return (
-    <Slide appear={false} direction='down' in={!trigger}>
-      {children}
-    </Slide>
+    <Fade in={trigger}>
+      <Button className='book-button' href='#booking' variant='text'>
+        <span className='glowing-txt'>{children}</span>
+      </Button>
+    </Fade>
   )
 }
 
-function NavbarItem({ link, children, noBorder, lang }) {
+function NavbarItem({ link, children, lang, mainColor, hidden }) {
   return (
     <Button
       href={link}
       variant='text'
       sx={{
-        color: '#f3c82e',
-        fontWeight: 'bold',
+        display: { xs: hidden ? 'none' : 'flex', lg: 'flex' },
+        color: mainColor || lang ? '#fcd222' : '#fff',
+        fontWeight: mainColor ? 'bold' : null,
         textTransform: 'capitalize',
-        minWidth: lang ? '40px' : null,
+        minWidth: lang ? '40px' : 'unset',
+        fontSize: 'inherit',
 
         '&:before': {
           content: "''",
           position: 'absolute',
           bottom: 0,
-          left: 0,
+          width: 0,
+          height: 2,
+          backgroundColor: '#fbdd54',
+          transition: '0.3s all'
+        },
+        '&:after': {
+          content: "''",
+          position: 'absolute',
+          top: 0,
           width: 0,
           height: 2,
           backgroundColor: '#fbdd54',
@@ -248,8 +419,7 @@ function NavbarItem({ link, children, noBorder, lang }) {
         },
         '&:hover': {
           color: '#fbdd54',
-          transform: 'scale(1.05)',
-          '&:before': {
+          '&:before,&:after': {
             width: '100%'
           }
         }

@@ -10,7 +10,7 @@ function RevealOnAppear({ children, transitionDelay = '0ms' }) {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5
+      threshold: 0.4
     }
 
     const observer = new IntersectionObserver(handleIntersection, options)
@@ -28,8 +28,8 @@ function RevealOnAppear({ children, transitionDelay = '0ms' }) {
     }
   }, [])
 
-  const handleIntersection = entries => {
-    entries.forEach(entry => {
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setReveal(true)
       }

@@ -214,6 +214,7 @@ export default function Games() {
     }
   ]
 
+  const titleWords = t('title').split(' ')
   return (
     <Box component='section' id='games'>
       <Box
@@ -243,7 +244,10 @@ export default function Games() {
               textAlign: 'center'
             }}
           >
-            {t('title')}
+            {titleWords[0]}{' '}
+            <span style={{ color: '#ec318a' }}>
+              {titleWords[1]} {titleWords[2]}
+            </span>
           </Typography>
           <Typography
             variant='h6'
@@ -255,13 +259,17 @@ export default function Games() {
             {t('subtitle')}
           </Typography>
         </Container>
-        <GamesContainer gamesArray={gamesArray.slice(0, 10)} speed={9000} />
         <GamesContainer
-          gamesArray={gamesArray.slice(10, 20)}
+          gamesArray={gamesArray.slice(0, 10)}
+          speed={9000}
           rtl={true}
-          speed={11000}
         />
-        <GamesContainer gamesArray={gamesArray.slice(20, 30)} speed={5000} />
+        <GamesContainer gamesArray={gamesArray.slice(10, 20)} speed={11000} />
+        <GamesContainer
+          gamesArray={gamesArray.slice(20, 30)}
+          speed={5000}
+          rtl={true}
+        />
         {/* <Box
           sx={{
             display: { xs: 'flex', sm: 'none' },

@@ -5,32 +5,7 @@ import Container from '@mui/material/Container'
 
 export default function Booking({ title }) {
   return (
-    <Box
-      component='section'
-      id='booking'
-      sx={{
-        position: 'relative',
-
-        '&:before': {
-          content: "''",
-          position: 'absolute',
-          top: 0,
-          width: '100%',
-          height: '10%',
-          background:
-            'linear-gradient(to bottom, rgba(30 ,31, 67,1), rgba(30 ,31, 67,0))'
-        },
-        '&:after': {
-          content: "''",
-          position: 'absolute',
-          bottom: -1,
-          width: '100%',
-          height: '10%',
-          background:
-            'linear-gradient(to top, rgba(30 ,31, 67,1), rgba(30 ,31, 67,0))'
-        }
-      }}
-    >
+    <Box component='section' id='booking' className='fade-section'>
       <Image
         src='/bg1.png'
         fill
@@ -68,7 +43,18 @@ export default function Booking({ title }) {
             {title}
           </Typography>
         </Box>
-        <div id='calendar_container'></div>
+        {/* <div id='calendar_container'></div> */}
+        <Image
+          src='/bookingPlaceholder.jpg'
+          // fill'
+          width={800}
+          height={800}
+          style={{
+            objectFit: 'fill',
+            width: '100%'
+          }}
+          alt=''
+        />
       </Container>
     </Box>
   )

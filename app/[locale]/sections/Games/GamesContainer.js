@@ -33,9 +33,12 @@ export default function GamesContainer({ gamesArray, rtl, speed }) {
           >
             <Box
               sx={{
-                my: 1,
+                my: 0.5,
                 height: '150px',
                 // borderRadius: '0.8rem',
+                clipPath: 'polygon(15% 0, 100% 0%, 85% 100%, 0% 100%)',
+                transform: 'scaleX(1.25)',
+
                 display: 'flex',
                 justifyContent: 'flex-end',
                 flexDirection: 'column',

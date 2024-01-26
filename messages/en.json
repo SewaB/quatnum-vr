@@ -1,11 +1,13 @@
 {
   "navbar": {
-    "about": "About",
+    "about": "About VR",
     "price": "Price",
     "certificate": "Certificate",
     "event": "Event",
     "contacts": "Contacts",
-    "book": "Book"
+    "book": "Book",
+    "faq": "FAQ",
+    "games": "Games"
   },
   "hero": {
     "title": "Enter another",
@@ -14,33 +16,41 @@
   },
   "about": {
     "title": "About VR",
-    "text": "Virtual reality is a modern industry that is actively developing. The use of virtual reality is becoming wider and more diverse. People often associate VR solely with entertainment, but this idea is wrong. Entertainment is just one area where VR can be used.<br/><br/>In reality, the possibilities of Virtual Reality are much wider. VR is actively used in scientific research, industry and education. However, of course, we should not forget about entertainment. The virtual reality gaming club is an excellent place for intense leisure time at affordable prices. One special helmet can transport you to an amazing new world, full of surprises, and create the illusion of complete realistic immersion in events.<br/><br/>Playing familiar computer games and immersing yourself in a realistic world with amazing adventures are completely different things."
+    "text": "The realm of virtual reality is a rapidly advancing and versatile industry. While many associate VR primarily with entertainment, this perception is quite limited. Entertainment merely scratches the surface of the broad spectrum of applications for Virtual Reality.<br/><br/>In reality, the scope of Virtual Reality extends far beyond entertainment. It plays a pivotal role in scientific research, industry applications, and educational endeavors. Nevertheless, the importance of entertainment should not be overlooked. A virtual reality gaming club offers an ideal setting for engaging leisure activities at reasonable costs. With just a specialized helmet, you can be transported to a mesmerizing new world, teeming with surprises, and experience the illusion of complete and realistic immersion in unfolding events.<br/><br/>Engaging in familiar computer games and truly immersing yourself in a lifelike world of incredible adventures are distinctly unique experiences.",
+    "subtitle": "The newest equipment",
+    "subtext": "We use the latest equipment. Our wireless Meta Quest 3 headsets are ultra-lightweight, ensuring maximum immersion into virtual reality.<br/><br/> The new controllers are even lighter and more ergonomic, providing convenience in use.<br/><br/> Additionally, enhanced spatial sound will create a sense of the unreal, making the virtual world even more realistic!"
   },
   "advantages": {
     "title": "Our Advantages",
     "multiplayer": "Multiplayer",
-    "treadmills": "Treadmills",
-    "flightSimulator": "Flight simulator",
-    "freeRoaming": "Free roaming",
-    "catering": "Catering",
-    "vrGuns": "VR guns",
-    "raceSimulator": "Race simulator",
-    "vrEscaperoom": "VR Escaperoom"
+    "multiplayerText": "Assemble your team and embark on thrilling adventures in the world of virtual reality",
+    "quest": "Quests",
+    "questText": "It's like a regular quest, but in parallel reality",
+    "sport": "Sport",
+    "sportText": "Choose your favorite sport and go!",
+    "racing": "Racing",
+    "racingText": "Always dreamed of getting behind the wheel of a racing car? 3..2..1..",
+    "space": "Space",
+    "spaceText": "Traveling to space is expensive and time-consuming. With us, it's instantaneous!",
+    "fight": "Fight",
+    "fightText": "Gladiator? Viking? Assassin? - Grab your weapon and join the battle!",
+    "kids": "Kids",
+    "kidsText": "Explore new worlds together with your children"
   },
   "descirption": {
     "title": "Peculiarities of VR",
-    "playLearnConnect": "Play, Learn, Connect",
-    "playLearnConnectText": "Play and learning collide here. From thrilling games to educational adventures, it's all about having a blast while expanding your horizons.",
-    "experienceFuture": "Experience the Future, Today",
-    "experienceFutureText": "Step into a world where your wildest dreams come true, and the boundaries of reality are pushed to their limits.",
-    "noLimits": "No limits",
-    "noLimitsText": "Step into a new dimension. We make the extraordinary ordinary, giving you a taste of the future right now.",
-    "muchEasier": "Much easier than regular gaming",
-    "muchEasierText": "Discover a world of immersive fun. No experience needed. Just bring your curiosity and enthusiasm. We'll take care of the rest!"
+    "timeTravel": "Time-Traveling Experiences",
+    "timeTravelText": "Explore the past, present, and future without leaving your seat! VR opens up the possibility to travel through time and witness historical events, futuristic landscapes, or even mythical realms.",
+    "immersiveSoundscape": "Immersive Soundscapes",
+    "immersiveSoundscapeText": "It's not just about what you see: it's about what you hear! VR provides immersive 3D audio that surrounds you, making every footstep, whisper, or explosion feel incredibly real.",
+    "fitnessFun": "Fitness fun",
+    "fitnessFunText": "Who said workouts have to be boring? Engage in exhilarating fitness routines with VR. Dance, box, or slice through beats with virtual reality workouts that make exercising a funky and enjoyable experience.",
+    "unleashCreativity": "Unleash Your Creativity",
+    "unleashCreativityText": "VR isn't just for consumers – it's a canvas for creators! Design 3D art, sculpt virtual masterpieces, or even build your own virtual world. Let your imagination run wild in the VR space."
   },
   "games": {
     "title": "Top Rated Games",
-    "subtitle": "More than 100 games available. For kids, for adults",
+    "subtitle": "More than 100 games. For big and small, for children and adults",
     "beatSaber": "BeatSaber",
     "beatSaberText": "BeatSaber is a VR rhythm game where you slash the beats of adrenaline-pumping music as they fly towards you, surrounded by a futuristic world.",
     "arizonaSunshine": "Arizona Sunshine",
@@ -73,26 +83,21 @@
   },
   "price": {
     "title": "Price",
-    "subtitle": "Discount! 50% on all services in honor of the opening of the club!",
-    "vrSessionTitle": "VR Session",
-    "vrSessionDuration": "1 person | 60 min",
-    "vrSessionButton": "Play",
-    "giftCardTitle": "Gift card",
-    "giftCardDuration": "1 person | 60 min",
-    "giftCardButton": "Buy",
-    "eventTitle": "Event",
-    "eventInfo1": "Corporate | Event | Birthday",
-    "eventInfo2": "Up to 15 people",
-    "eventButton": "More info",
-
-    "modalTitle": "Book an Event",
-    "phone": "Phone",
-    "name": "Name",
-    "date": "Date",
-    "address": "Address",
-    "comment": "Comment",
-    "commentPlaceholder": "Amount of people, or any other comments",
-    "button": "Confirm"
+    "subtitle": "Cost is indicated for 60 minutes",
+    "vrSession": "VR session",
+    "weekDay": "Weekdays 11:00 AM - 6:00 PM",
+    "uah": "uah",
+    "weekDayEvening": "Weekdays after 6:00 PM",
+    "andWeekend": "and weekends",
+    "vrParty": "VR party",
+    "rentClub": "rent entire club",
+    "closeEvent": "closed event",
+    "partyInclude": "4 helmets, PS 5",
+    "fromHours": "from 3 hours",
+    "from": "from",
+    "certificate": "Gift certificate",
+    "book": "Book",
+    "buy": "Buy"
   },
   "booking": {
     "title": "Booking"
@@ -114,10 +119,35 @@
     "reviewTitle7": "WOW",
     "reviewText7": "Something incredible. I recommend it to everyone"
   },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+
+    "time": "How long is a session?",
+    "timeText": "One VR gaming session is designed to last for 60 minutes",
+
+    "reserve": "Is it necessary to reserve a time slot?",
+    "reserveText": "While we welcome walk-in visitors, we recommend reserving a time slot in advance to ensure availability. Check our booking calendar or contact us to book a convenient time for you",
+
+    "multiplayer": "How many people can I bring with me?",
+    "multiplayerText": "Most multiplayer games are designed for 4 people. However, our club is equipped with 6 state-of-the-art headsets. Additionally, we have an area for playing on PS5",
+
+    "sales": "Do you offer VR sessions for special events or parties?",
+    "salesText": "Absolutely! We provide services for special events and parties, offering a unique and memorable virtual reality experience for your group. Contact us for additional information on group bookings and event packages.",
+
+    "safety": "What safety measures are taken during VR sessions?",
+    "safetyText": "Your safety is our priority. We provide sanitized VR headsets, and our staff is ready to assist you with setup and answer any questions you may have. Please follow our safety recommendations to ensure a safe and enjoyable experience.",
+
+    "birthday": "Are there discounts or gifts for birthdays?",
+    "birthdayText": "We do not offer additional discounts for birthdays. However, every QuantumVR guest after celebrating their special day will have the opportunity to purchase a QuantumVR gift card at a special offer of 2 for the price of 1. Additionally, every 5th game is complimentary for our guests."
+  },
+
   "contacts": {
     "title": "Contacts",
     "workingHours": "Working hours",
     "address": "Address",
+    "addressCity": "Tatarska St, 1V, Kyiv",
+    "addressMetro": "metro Lukianivska",
     "phone": "Phone",
     "email": "Email",
     "club": "club"

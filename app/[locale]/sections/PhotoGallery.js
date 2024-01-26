@@ -17,13 +17,13 @@ export default function PhotoGallery({ title }) {
 
   const photosArray = [
     {
-      image: 'photo9.jpg'
+      image: 'photo9.webp'
     },
     {
       image: 'photo1.webp'
     },
     {
-      image: 'photo5.jpg'
+      image: 'photo5.webp'
     },
     {
       image: 'photo3.png'
@@ -96,7 +96,7 @@ export default function PhotoGallery({ title }) {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            mb: '4rem'
+            mb: { xs: '3rem', sm: '4rem' }
           }}
         >
           <Typography
@@ -139,7 +139,7 @@ export default function PhotoGallery({ title }) {
                   },
 
                   '&:hover': {
-                    boxShadow: '5px 9px 7px -1px rgba(117, 252, 206,0.3)',
+                    boxShadow: '5px 9px 7px -1px rgba(236, 49, 138,0.3)',
                     '& img': {
                       opacity: 1
                     }

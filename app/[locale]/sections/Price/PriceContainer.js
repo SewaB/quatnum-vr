@@ -1,32 +1,41 @@
 'use client'
+
 import React from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
+
 import Button from '@mui/material/Button'
+import { Grid } from '@mui/material'
+import Image from 'next/image'
 
-import OrderModal from '../../components/OrderModal'
-
-export default function Price({ content, modalContent }) {
-  const [showModal, setShowModal] = React.useState(false)
-
+export default function Price({ content }) {
   return (
-    <Box component='section' id='price' sx={{ position: 'relative' }}>
+    <section component='section' id='price'>
       <Container
         maxWidth='lg'
         disableGutters={true}
         sx={{
           pt: { xs: 6, md: 9 },
           py: { xs: 6, md: 12 },
-          color: '#fff'
+          position: 'relative',
+          px: 4
         }}
       >
+        <div className='lekson' />
+        <div className='kekson'>Start _now</div>
+        <div className='price-light'>
+          <div />
+          <div />
+          <div />
+        </div>
+
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            mb: '4rem'
+            mb: { xs: '2rem', sm: '4rem' }
           }}
         >
           <Typography
@@ -39,303 +48,350 @@ export default function Price({ content, modalContent }) {
             {content.title}
           </Typography>
           <Typography
-            variant='h6'
-            sx={{
-              fontSize: { xs: '1.4rem', tb: '2rem' },
-              textAlign: 'center'
-            }}
+            sx={{ mt: 3, color: '#FFF', fontSize: '1.2rem', color: '#bdbdbd' }}
           >
             {content.subtitle}
           </Typography>
         </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: 'center',
-            gap: '50px',
-            color: '#1e1f43'
-          }}
-        >
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={4}>
+            <Item title={content.vrSession} buttonText={content.book}>
+              <Image
+                src='/13.jpg'
+                fill
+                style={{
+                  objectFit: 'cover',
+                  // pointerEvents: 'none',
+                  opacity: 0.3,
+                  zIndex: -1,
+                  filter: 'blur(1px)'
+                }}
+                alt=''
+              />
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center',
+                    lineHeight: 'normal'
+                  }}
+                >
+                  {content.weekDay}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.7rem', sm: '2rem' },
+                    fontWeight: 'bold',
+                    color: '#ec318a'
+                  }}
+                >
+                  300 {content.uah}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center',
+                    lineHeight: 'normal'
+                  }}
+                >
+                  {content.weekDayEvening}
+                  <br />
+                  {content.andWeekend}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.7rem', sm: '2rem' },
+                    fontWeight: 'bold',
+                    color: '#ec318a'
+                  }}
+                >
+                  350 {content.uah}
+                </Typography>
+              </Box>
+            </Item>
+          </Grid>
 
-              flexDirection: 'column',
-              width: '425px',
-              height: '350px',
-              backgroundColor: '#75fcce',
-              position: 'relative',
-              clipPath: { md: 'polygon(0 0, 65% 0, 100% 100%, 35% 100%)' },
-              maxWidth: { xs: '300px', md: 'initial' },
-              transition: 'all 0.3s',
-              borderRadius: { xs: '1.2rem', md: 'unset' },
-              '&:hover': {
-                transform: 'scale(1.1)'
-              }
-            }}
-          >
-            <Typography
-              sx={{
-                fontWeight: 'bold',
-                fontSize: '2rem',
-                textAlign: 'center',
-                lineHeight: 'normal',
-                '&:after': {
-                  content: "''",
-                  margin: '10px auto',
-                  display: 'block',
-                  width: '80px',
-                  height: '4px',
-                  borderRadius: '8px',
-                  backgroundColor: '#1e1f43'
-                }
-              }}
-            >
-              {content.vrSessionTitle}
-            </Typography>
-            <Typography>{content.vrSessionDuration}</Typography>
-            <Typography>&nbsp;</Typography>
+          <Grid item xs={12} md={4}>
+            <Item title={content.vrParty} buttonText={content.book}>
+              <Image
+                src='/party.jpg'
+                fill
+                style={{
+                  objectFit: 'cover',
+                  // pointerEvents: 'none',
+                  opacity: 0.25,
+                  zIndex: -1,
+                  filter: 'blur(1px)'
+                }}
+                alt=''
+              />
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center'
+                  }}
+                >
+                  {content.rentClub}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center'
+                  }}
+                >
+                  {content.closeEvent}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center'
+                  }}
+                >
+                  {content.partyInclude}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center'
+                  }}
+                >
+                  {content.fromHours}
+                </Typography>
+              </Box>
 
-            <Typography
-              sx={{ fontWeight: 'bold', fontSize: '2rem', display: 'flex' }}
-            >
-              <Box
-                component='span'
+              <Typography
                 sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  position: 'relative',
-                  '&:before': {
-                    content: "''",
-                    left: '-20%',
-                    width: '130%',
-                    height: '1.5px',
-
-                    backgroundColor: 'red',
-                    position: 'absolute',
-                    transform: 'rotate(25deg)'
-                  },
-                  '&:after': {
-                    content: "''",
-                    left: '-20%',
-                    width: '130%',
-                    height: '1.5px',
-                    backgroundColor: 'red',
-                    position: 'absolute',
-                    transform: 'rotate(335deg)'
-                  }
+                  fontSize: { xs: '1.7rem', sm: '2rem' },
+                  fontWeight: 'bold',
+                  color: '#ec318a'
                 }}
               >
-                20 €
+                {content.from} 1500 {content.uah}
+              </Typography>
+            </Item>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Item title='PS 5' buttonText={content.book}>
+              <Image
+                src='/ps.jpg'
+                fill
+                style={{
+                  objectFit: 'cover',
+                  // pointerEvents: 'none',
+                  opacity: 0.3,
+                  zIndex: -1,
+                  objectPosition: 'left',
+                  filter: 'blur(1px)'
+                }}
+                alt=''
+              />
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center',
+                    lineHeight: 'normal'
+                  }}
+                >
+                  {content.weekDay}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.7rem', sm: '2rem' },
+
+                    fontWeight: 'bold',
+                    color: '#ec318a'
+                  }}
+                >
+                  200 {content.uah}
+                </Typography>
               </Box>
-              <span>&nbsp; 10 €</span>
-            </Typography>
-            <Button
-              href='#booking'
-              sx={{
-                width: '150px',
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.2rem', sm: '1.3rem' },
+                    textAlign: 'center',
+                    lineHeight: 'normal'
+                  }}
+                >
+                  {content.weekDayEvening}
+                  <br />
+                  {content.andWeekend}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: '1.7rem', sm: '2rem' },
 
-                ml: { md: '25%' },
-                position: 'absolute',
-                bottom: 30,
-                // color: '#fff',
-                // border: 'none',
-                backgroundColor: '#b40c9b',
-                border: '2px solid #b40c9b',
-                color: '#fff',
-                borderRadius: '2rem',
-                '&:hover': {
-                  backgroundColor: '#7f0b6e',
-                  borderColor: '#7f0b6e'
-                }
-              }}
-            >
-              {content.vrSessionButton}
-            </Button>
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: { xs: 'center', md: 'flex-start' },
-              flexDirection: 'column',
+                    fontWeight: 'bold',
+                    color: '#ec318a'
+                  }}
+                >
+                  250 {content.uah}
+                </Typography>
+              </Box>
+            </Item>
+          </Grid>
+        </Grid>
 
-              pt: { md: 4 },
-
-              width: '300px',
-              height: '350px',
-              // backgroundColor: '#37a2b6',
-              backgroundColor: '#793FDF',
-              clipPath: { md: 'polygon(50% 100%, 0 0, 100% 0)' },
-              position: { xs: 'relative', md: 'absolute' },
-              transition: 'all 0.3s',
-              borderRadius: { xs: '1.2rem', md: 'unset' },
-
-              color: '#fff',
-              '&:hover': {
-                transform: 'scale(1.1)'
-              }
-            }}
-          >
-            <Typography
-              sx={{
-                fontWeight: 'bold',
-                fontSize: '2rem',
-                lineHeight: 'normal',
-                '&:after': {
-                  content: "''",
-                  margin: '10px auto',
-                  display: 'block',
-                  width: '80px',
-                  height: '4px',
-                  borderRadius: '8px',
-                  backgroundColor: '#fff'
-                }
-              }}
-            >
-              {content.giftCardTitle}
-            </Typography>
-            <Typography>{content.giftCardDuration}</Typography>
-            <Typography
-              sx={{ fontWeight: 'bold', fontSize: '2rem', display: 'flex' }}
+        <Grid container spacing={4} sx={{ mt: 0 }} justifyContent='center'>
+          <Grid item xs={12} md={6}>
+            <Item
+              title={content.certificate}
+              fullWidth
+              buttonText={content.buy}
             >
               <Box
-                component='span'
                 sx={{
-                  display: 'flex',
-                  alignItems: 'center',
+                  width: { xs: '130px', sm: '160px' },
+                  height: { xs: '110px', sm: '135px' },
                   position: 'relative',
-                  '&:before': {
-                    content: "''",
-                    left: '-20%',
-                    width: '130%',
-                    height: '1.5px',
-
-                    backgroundColor: 'red',
-                    position: 'absolute',
-                    transform: 'rotate(25deg)'
-                  },
-                  '&:after': {
-                    content: "''",
-                    left: '-20%',
-                    width: '130%',
-                    height: '1.5px',
-                    backgroundColor: 'red',
-                    position: 'absolute',
-                    transform: 'rotate(335deg)'
-                  }
+                  opacity: { xs: '0.4', sm: '0.9' },
+                  zIndex: -1,
+                  position: 'absolute',
+                  right: { xs: '0.5rem', sm: '0.75rem' },
+                  bottom: { xs: '1.5rem', sm: '2rem' },
+                  transform: 'scale(-1,1)'
                 }}
               >
-                20 €
+                <Image
+                  src='/gift.png'
+                  fill
+                  style={{
+                    objectFit: 'cover'
+                    // pointerEvents: 'none',
+                  }}
+                  alt=''
+                />
               </Box>
-              &nbsp;10 €
-            </Typography>
-            <Button
-              href='#booking'
-              sx={{
-                mt: { md: 3 },
-                width: '100px',
 
-                position: { xs: 'absolute', md: 'unset' },
-                bottom: 30,
-                // color: '#fff',
-                // border: 'none',
-                // backgroundColor: '#0c4eb4',
-                // borderRadius: 0,
+              <Typography
+                sx={{
+                  fontSize: { xs: '1.7rem', sm: '2rem' },
+                  fontWeight: 'bold',
+                  color: '#ec318a',
+                  mt: 1
+                }}
+              >
+                350 {content.uah}
+              </Typography>
+            </Item>
+          </Grid>
+        </Grid>
 
-                backgroundColor: '#b40c9b',
-                border: '2px solid #b40c9b',
-                color: '#fff',
-                borderRadius: '2rem',
-                '&:hover': {
-                  backgroundColor: '#7f0b6e',
-                  borderColor: '#7f0b6e'
-                }
-              }}
-            >
-              {content.giftCardButton}
-            </Button>
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column',
-
-              width: '425px',
-              maxWidth: { xs: '300px', md: 'initial' },
-              height: '350px',
-              backgroundColor: '#75fcce',
-              position: 'relative',
-              clipPath: { md: 'polygon(35% 0, 100% 0, 65% 100%, 0 100%)' },
-              transition: 'all 0.3s',
-              borderRadius: { xs: '1.2rem', md: 'unset' },
-
-              '&:hover': {
-                transform: 'scale(1.1)'
-              }
-            }}
-          >
-            <Typography
-              sx={{
-                fontWeight: 'bold',
-                fontSize: '2rem',
-                lineHeight: 'normal',
-                '&:after': {
-                  content: "''",
-                  margin: '10px auto',
-                  display: 'block',
-                  width: '80px',
-                  height: '4px',
-                  borderRadius: '8px',
-                  backgroundColor: '#1e1f43'
-                }
-              }}
-            >
-              {content.eventTitle}
-            </Typography>
-            <Typography>{content.eventInfo1}</Typography>
-            <Typography>{content.eventInfo2}</Typography>
-            <Typography sx={{ fontWeight: 'bold', fontSize: '2rem' }}>
-              &nbsp;
-            </Typography>
-            <Button
-              // onClick={() => setShowModal(true)}
-              href='#contacts'
-              sx={{
-                width: '150px',
-                mr: { md: '25%' },
-                position: 'absolute',
-                bottom: 30,
-                // color: '#fff',
-                // border: 'none',
-                // backgroundColor: '#b40c9b',
-                // borderRadius: 0,
-                backgroundColor: '#3f55df',
-                border: '2px solid #3f55df',
-                color: '#fff',
-                borderRadius: '2rem',
-                '&:hover': {
-                  backgroundColor: '#253385',
-                  borderColor: '#253385'
-                }
-              }}
-            >
-              {content.eventButton}
-            </Button>
-          </Box>
-        </Box>
+        {/* <Box
+          <Row>
+            <Typography>PlayStation 5</Typography>
+            <Typography>200</Typography>
+            <Typography>250</Typography>
+          </Row>
+          <Row>
+            <Typography>Подарочный сертификат</Typography>
+            <Typography>300</Typography>
+            <Typography>350</Typography>
+          </Row>
+          
+        </Box> */}
       </Container>
-      <OrderModal
-        open={showModal}
-        onClose={() => setShowModal(false)}
-        content={modalContent}
-      />
-    </Box>
+    </section>
   )
 }
+
+const Item = ({ children, title, fullWidth, buttonText }) => (
+  <Box
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+
+      gap: { xs: '1.5rem', sm: '2rem' },
+
+      height: '100%',
+
+      border: '2px solid #ec318a',
+
+      p: 2,
+      pb: 3,
+      pt: 4,
+      textAlign: 'center',
+      borderRadius: '0.6rem',
+      // backdropFilter: 'blur(5px)',
+      // backgroundColor: 'rgba(97 ,239, 255,0.125)',
+      // backgroundColor: '#000',
+      transition: '0.2s all',
+      maxWidth: { xs: '400px', md: fullWidth ? '100%' : '400px' },
+      mx: 'auto',
+      position: 'relative',
+      overflow: 'hidden',
+      backgroundColor: 'rgba(0,0,0,0.6)',
+      '&:hover': {
+        boxShadow:
+          'inset 0px 0px 0.2rem 0px #f7038c, 0px 0px 1.5rem 0px #f7038c',
+        transform: { md: 'scale(1.05)' }
+      }
+    }}
+  >
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+
+        gap: { xs: '1.5rem', sm: '2rem' },
+
+        height: '100%',
+        zIndex: 1
+      }}
+    >
+      <Typography
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          fontSize: { xs: '1.5rem', sm: '1.8rem' },
+          textAlign: 'center',
+          fontWeight: 'bold',
+          lineHeight: 'normal',
+          '&:after': {
+            content: "''",
+            position: 'absolute',
+            height: '4px',
+            background: '#ec318a',
+            width: '100px',
+            bottom: { xs: '-0.8rem', sm: '-1rem' },
+            borderRadius: '3px'
+          }
+        }}
+      >
+        {title}
+      </Typography>
+      {children}
+      <Button
+        href='#booking'
+        sx={{
+          color: '#fcd222',
+          fontSize: '1rem',
+          textTransform: 'unset',
+          borderRadius: '0.4rem',
+          px: 3,
+          border: '2px solid #fcd222',
+          mt: 'auto',
+          fontSize: '1.05rem',
+          fontWeight: 'bold',
+
+          '&:hover': {
+            backgroundColor: '#fcd222',
+            color: '#000',
+            boxShadow:
+              'inset 0px 0px 0.2rem 0px #fcd222, 0px 0px 1.5rem 0px #fcd222'
+          }
+        }}
+      >
+        {buttonText}
+      </Button>
+    </Box>
+  </Box>
+)

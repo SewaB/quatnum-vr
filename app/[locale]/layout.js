@@ -1,24 +1,24 @@
 import { useLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
 import '../globals.css'
-import Script from 'next/script'
+// import Script from 'next/script'
 
-const ltMetadata = {
-  title: 'WOW VR | Virtuali realybė Vilniuje',
+const uaMetadata = {
+  title: 'QuantumVR | Віртуальна реальність в Києві',
   description:
-    'Pirmasis VR klubas Lietuvoje su naujausiomis virtualios realybės ausinėmis Oculus Quest 3. Didžiulė žaidimų biblioteka kiekvienam žaidėjų skoniui ir amžiui. Vienetiniai ir komandiniai žaidimai. Žaidimai virtualioje, mišrioje ir papildytoje realybėje.',
-  keywords: ['WOW VR', 'Virtuali realybė', 'VR Klubas'],
+    'Зануртеся в світ нескінченних вражень в QuantumVR, де Віртуальна Реальність зустрічає душу Києва. Випустіть ексцитацію за допомогою захоплюючих симуляцій, мультиплеєрних ігор та футуристичних пригод.',
+  keywords: ['QuantumVR', 'Віртуальна реальність', 'VR клуб'],
   themeColor: '#321856',
-  metadataBase: new URL('https://wow-vr.lt'),
+  // metadataBase: new URL('https://wow-vr.lt'),
   openGraph: {
-    title: 'WOW VR | Virtuali realybė Vilniuje',
+    title: 'QuantumVR | Віртуальна реальність в Києві',
     description:
-      'Pirmasis VR klubas Lietuvoje su naujausiomis virtualios realybės ausinėmis Oculus Quest 3. Didžiulė žaidimų biblioteka kiekvienam žaidėjų skoniui ir amžiui. Vienetiniai ir komandiniai žaidimai. Žaidimai virtualioje, mišrioje ir papildytoje realybėje.',
-    url: 'https://wow-wr.lt',
-    siteName: 'WOW VR | Virtuali realybė Vilniuje',
+      'Зануртеся в світ нескінченних вражень в QuantumVR, де Віртуальна Реальність зустрічає душу Києва. Випустіть ексцитацію за допомогою захоплюючих симуляцій, мультиплеєрних ігор та футуристичних пригод.',
+    // url: 'https://wow-wr.lt',
+    siteName: 'QuantumVR | Віртуальна реальність в Києві',
     images: [
       {
-        url: '/poster.png',
+        url: '/poster.jpg',
         width: 400,
         height: 400
       }
@@ -33,21 +33,50 @@ const ltMetadata = {
 }
 
 const enMetadata = {
-  title: 'WOW VR | Virtual Reality in Vilnius',
+  title: 'QuantumVR | Virtual Reality in Kiev',
   description:
-    'The first VR club in Lithuania with the latest virtual reality headsets Oculus Quest 3. A vast library of games for every taste and age of players. Single and team games. Games in virtual, mixed, and augmented reality.',
-  keywords: ['WOW VR', 'Virtual Reality', 'VR Club'],
+    'Dive into a realm of limitless experiences at QuantumVR, where Virtual Reality meets the soul of Kiev. Unleash excitement with captivating simulations, multiplayer games, and futuristic adventures. ',
+  keywords: ['QuantumVR', 'Virtual Reality', 'VR Club'],
   themeColor: '#321856',
-  metadataBase: new URL('https://wow-vr.lt'),
+  // metadataBase: new URL('https://wow-vr.lt'),
   openGraph: {
-    title: 'WOW VR | Virtual Reality in Vilnius',
+    title: 'QuantumVR | Virtual Reality in Kiev',
     description:
-      'The first VR club in Lithuania with the latest virtual reality headsets Oculus Quest 3. A vast library of games for every taste and age of players. Single and team games. Games in virtual, mixed, and augmented reality.',
-    url: 'https://wow-wr.lt',
-    siteName: 'WOW VR | Virtual Reality in Vilnius',
+      'Dive into a realm of limitless experiences at QuantumVR, where Virtual Reality meets the soul of Kiev. Unleash excitement with captivating simulations, multiplayer games, and futuristic adventures. ',
+    // url: 'https://wow-wr.lt',
+    siteName: 'QuantumVR | Virtual Reality in Kiev',
     images: [
       {
-        url: '/poster.png',
+        url: '/poster.jpg',
+        width: 400,
+        height: 400
+      }
+    ],
+    type: 'website'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true
+  }
+}
+
+const ruMetadata = {
+  title: 'QuantumVR | Виртуальная реальность в Киеве',
+  description:
+    'Окунитесь в мир безграничных впечатлений в QuantumVR, где Виртуальная Реальность встречает душу Киева. Разгорите волнение с захватывающими симуляциями, многопользовательскими играми и футуристическими приключениями.',
+  keywords: ['QuantumVR', 'Виртуальная реальность', 'VR клуб'],
+  themeColor: '#321856',
+  // metadataBase: new URL('https://wow-vr.lt'),
+  openGraph: {
+    title: 'QuantumVR | Виртуальная реальность в Киеве',
+    description:
+      'Окунитесь в мир безграничных впечатлений в QuantumVR, где Виртуальная Реальность встречает душу Киева. Разгорите волнение с захватывающими симуляциями, многопользовательскими играми и футуристическими приключениями.',
+    // url: 'https://wow-wr.lt',
+    siteName: 'QuantumVR | Виртуальная реальность в Киеве',
+    images: [
+      {
+        url: '/poster.jpg',
         width: 400,
         height: 400
       }
@@ -62,7 +91,11 @@ const enMetadata = {
 }
 
 export async function generateMetadata({ params }) {
-  return params.locale === 'lt' ? ltMetadata : enMetadata
+  return params.locale === 'ua'
+    ? uaMetadata
+    : params.locale === 'en'
+    ? enMetadata
+    : ruMetadata
 }
 
 export default function RootLayout({ children, params }) {
@@ -76,7 +109,7 @@ export default function RootLayout({ children, params }) {
     <html lang={locale}>
       <head>
         {/* Google tag (gtag.js) */}
-        <Script
+        {/* <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=AW-11392804385'
         />
@@ -91,11 +124,18 @@ export default function RootLayout({ children, params }) {
               gtag('config', 'AW-11392804385');
             `
           }}
+        /> */}
+
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'
+          rel='stylesheet'
         />
       </head>
       <body>
         {children}
-        <Script
+        {/* <Script
           async
           defer
           strategy='lazyOnload'
@@ -176,7 +216,7 @@ export default function RootLayout({ children, params }) {
                 head.appendChild(jsScript);
               }, 2000);`
           }}
-        />
+        /> */}
       </body>
     </html>
   )

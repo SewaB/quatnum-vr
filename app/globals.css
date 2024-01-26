@@ -21,12 +21,15 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-padding-top: 4rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
-
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
@@ -44,6 +47,128 @@ a {
   background-color: #fdda6f;
   transform: 0.3s all;
 }
+
+.animate-sound {
+  animation: animateSound 3s ease-in-out infinite;
+}
+@keyframes animateSound {
+  50% {
+    transform: scale(1.25);
+  }
+}
+.animate-time {
+  animation: animateTime 4s linear infinite;
+}
+
+@keyframes animateTime {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-paint {
+  animation: animatePaint 5s infinite;
+}
+
+@keyframes animatePaint {
+  0% {
+  }
+  5% {
+    transform: scale(1.5);
+  }
+  80% {
+    transform: translateY(20px) scale(1.5);
+  }
+}
+.animate-snowboard {
+  animation: animateSnowboard 2.5s ease-in-out infinite;
+}
+@keyframes animateSnowboard {
+  25% {
+    transform: translateX(20px) scale(1.1);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  75% {
+    transform: translateX(14px);
+  }
+}
+
+.advantages-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 204px;
+  height: 234px;
+  padding: 2px;
+
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  background-image: linear-gradient(green, red, purple, blue, yellow);
+  background-size: 400% 400%;
+  animation: AnimateBG 3.5s ease-in-out infinite alternate;
+}
+
+.advantages-item_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  background-color: #2f2f33;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  position: relative;
+  overflow: hidden;
+}
+.advantages-item_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  padding: 8px;
+
+  position: absolute;
+  z-index: 2;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  text-align: center;
+  transition: 0.4s all;
+}
+
+.advantages-item_block:hover .advantages-item_text {
+  opacity: 1;
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 25% 25%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 75% 75%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -55,50 +180,19 @@ a {
   height: 100vh;
   max-height: 1200px;
   position: relative;
-
-  background: linear-gradient(#331b5c, rgba(0, 0, 0, 0) 50%);
 }
+
 .hero-section:after {
   content: '';
   width: 100%;
-  height: 10%;
+  height: 40%;
 
   position: absolute;
   bottom: 0;
 
-  background: linear-gradient(to top, rgba(30, 31, 67, 1), rgba(30, 31, 67, 0));
+  background: linear-gradient(to top, rgba(20, 22, 26, 1), rgba(20, 22, 26, 0));
 }
-.hero-section_container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
-  height: 100%;
-  position: relative;
-}
-.rules-section {
-  position: relative;
-}
-.rules-section:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 10%;
-  background: linear-gradient(
-    to bottom,
-    rgba(30, 31, 67, 1),
-    rgba(30, 31, 67, 0)
-  );
-}
-.rules-section:after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-  height: 10%;
-  background: linear-gradient(to top, rgba(30, 31, 67, 1), rgba(30, 31, 67, 0));
-}
 .footer {
   display: flex;
   align-items: center;
@@ -107,842 +201,441 @@ a {
   padding: 1.25rem 0;
 }
 
-.lol {
-  animation: cyberpunk-glitch 7s step-end infinite,
-    skew-glitch 7s step-end infinite;
-}
-@-webkit-keyframes skew-glitch {
-  0% {
-    -webkit-transform: skew(83deg, 2deg) scaleY(0.25);
-    transform: skew(83deg, 2deg) scaleY(0.25);
-  }
-
-  27% {
-    -webkit-transform: skew(-83deg, 2deg) scaleY(0.25);
-    transform: skew(-83deg, 2deg) scaleY(0.25);
-  }
-
-  66% {
-    -webkit-transform: skew(93deg, -2deg) scaleY(0.25);
-    transform: skew(93deg, -2deg) scaleY(0.25);
-  }
-
-  99% {
-    -webkit-transform: skew(-89deg, -2deg) scaleY(0.25);
-    transform: skew(-89deg, -2deg) scaleY(0.25);
-  }
-
-  1%,
-  28%,
-  67%,
-  92% {
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes skew-glitch {
-  0% {
-    -webkit-transform: skew(83deg, 2deg) scaleY(0.25);
-    transform: skew(83deg, 2deg) scaleY(0.25);
-  }
-
-  27% {
-    -webkit-transform: skew(-83deg, 2deg) scaleY(0.25);
-    transform: skew(-83deg, 2deg) scaleY(0.25);
-  }
-
-  66% {
-    -webkit-transform: skew(93deg, -2deg) scaleY(0.25);
-    transform: skew(93deg, -2deg) scaleY(0.25);
-    color: #aaffff;
-  }
-
-  91% {
-    -webkit-transform: skew(-89deg, -2deg) scaleY(0.25);
-    transform: skew(-89deg, -2deg) scaleY(0.25);
-  }
-
-  1%,
-  28%,
-  67%,
-  92% {
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@-webkit-keyframes cyberpunk-glitch {
-  0% {
-    -webkit-clip-path: polygon(
-      96% 81%,
-      23% 67%,
-      3% 70%,
-      81% 58%,
-      63% 65%,
-      71% 18%,
-      60% 85%,
-      22% 27%,
-      26% 25%,
-      60% 53%,
-      79% 62%,
-      61% 6%,
-      8% 1%,
-      12% 81%,
-      12% 21%,
-      75% 7%,
-      31% 61%,
-      69% 79%,
-      41% 46%,
-      3% 7%,
-      94% 96%,
-      16% 40%,
-      10% 99%,
-      22% 67%,
-      83% 41%,
-      92% 76%
-    );
-    clip-path: polygon(
-      96% 81%,
-      23% 67%,
-      3% 70%,
-      81% 58%,
-      63% 65%,
-      71% 18%,
-      60% 85%,
-      22% 27%,
-      26% 25%,
-      60% 53%,
-      79% 62%,
-      61% 6%,
-      8% 1%,
-      12% 81%,
-      12% 21%,
-      75% 7%,
-      31% 61%,
-      69% 79%,
-      41% 46%,
-      3% 7%,
-      94% 96%,
-      16% 40%,
-      10% 99%,
-      22% 67%,
-      83% 41%,
-      92% 76%
-    );
-  }
-
-  4% {
-    -webkit-clip-path: polygon(
-      25% 86%,
-      59% 45%,
-      12% 89%,
-      25% 14%,
-      1% 82%,
-      36% 13%,
-      85% 53%,
-      59% 8%,
-      12% 76%,
-      69% 93%,
-      3% 49%,
-      74% 64%,
-      6% 87%,
-      36% 94%,
-      55% 30%,
-      53% 16%,
-      26% 39%,
-      7% 69%,
-      23% 96%,
-      83% 38%,
-      33% 25%,
-      7% 36%,
-      28% 41%,
-      27% 85%,
-      9% 77%,
-      64% 47%
-    );
-    clip-path: polygon(
-      25% 86%,
-      59% 45%,
-      12% 89%,
-      25% 14%,
-      1% 82%,
-      36% 13%,
-      85% 53%,
-      59% 8%,
-      12% 76%,
-      69% 93%,
-      3% 49%,
-      74% 64%,
-      6% 87%,
-      36% 94%,
-      55% 30%,
-      53% 16%,
-      26% 39%,
-      7% 69%,
-      23% 96%,
-      83% 38%,
-      33% 25%,
-      7% 36%,
-      28% 41%,
-      27% 85%,
-      9% 77%,
-      64% 47%
-    );
-  }
-
-  27% {
-    -webkit-clip-path: polygon(
-      39% 7%,
-      81% 81%,
-      97% 19%,
-      37% 54%,
-      19% 66%,
-      98% 57%,
-      10% 45%,
-      60% 82%,
-      10% 96%,
-      46% 53%,
-      70% 68%,
-      89% 24%,
-      6% 45%,
-      81% 29%,
-      68% 54%,
-      77% 32%,
-      90% 44%,
-      28% 36%,
-      66% 72%,
-      12% 98%,
-      83% 10%,
-      11% 71%,
-      71% 78%,
-      11% 93%,
-      50% 29%,
-      36% 36%
-    );
-    clip-path: polygon(
-      39% 7%,
-      81% 81%,
-      97% 19%,
-      37% 54%,
-      19% 66%,
-      98% 57%,
-      10% 45%,
-      60% 82%,
-      10% 96%,
-      46% 53%,
-      70% 68%,
-      89% 24%,
-      6% 45%,
-      81% 29%,
-      68% 54%,
-      77% 32%,
-      90% 44%,
-      28% 36%,
-      66% 72%,
-      12% 98%,
-      83% 10%,
-      11% 71%,
-      71% 78%,
-      11% 93%,
-      50% 29%,
-      36% 36%
-    );
-  }
-
-  51% {
-    -webkit-clip-path: polygon(
-      18% 34%,
-      31% 77%,
-      73% 57%,
-      69% 50%,
-      62% 33%,
-      34% 10%,
-      3% 66%,
-      76% 4%,
-      44% 97%,
-      43% 50%,
-      68% 3%,
-      72% 17%,
-      94% 57%,
-      46% 74%,
-      69% 17%,
-      56% 24%,
-      93% 59%,
-      10% 84%,
-      93% 76%,
-      70% 26%,
-      93% 2%,
-      84% 83%,
-      25% 4%,
-      49% 93%,
-      14% 64%,
-      31% 60%
-    );
-    clip-path: polygon(
-      18% 34%,
-      31% 77%,
-      73% 57%,
-      69% 50%,
-      62% 33%,
-      34% 10%,
-      3% 66%,
-      76% 4%,
-      44% 97%,
-      43% 50%,
-      68% 3%,
-      72% 17%,
-      94% 57%,
-      46% 74%,
-      69% 17%,
-      56% 24%,
-      93% 59%,
-      10% 84%,
-      93% 76%,
-      70% 26%,
-      93% 2%,
-      84% 83%,
-      25% 4%,
-      49% 93%,
-      14% 64%,
-      31% 60%
-    );
-  }
-
-  66% {
-    -webkit-clip-path: polygon(
-      91% 2%,
-      50% 60%,
-      51% 75%,
-      11% 27%,
-      96% 3%,
-      36% 12%,
-      22% 49%,
-      21% 75%,
-      13% 30%,
-      29% 41%,
-      2% 76%,
-      72% 52%,
-      40% 56%,
-      19% 38%,
-      32% 7%,
-      30% 34%,
-      3% 27%,
-      48% 17%,
-      1% 33%,
-      16% 41%,
-      24% 21%,
-      47% 42%,
-      16% 4%,
-      81% 91%,
-      45% 83%,
-      21% 21%
-    );
-    clip-path: polygon(
-      91% 2%,
-      50% 60%,
-      51% 75%,
-      11% 27%,
-      96% 3%,
-      36% 12%,
-      22% 49%,
-      21% 75%,
-      13% 30%,
-      29% 41%,
-      2% 76%,
-      72% 52%,
-      40% 56%,
-      19% 38%,
-      32% 7%,
-      30% 34%,
-      3% 27%,
-      48% 17%,
-      1% 33%,
-      16% 41%,
-      24% 21%,
-      47% 42%,
-      16% 4%,
-      81% 91%,
-      45% 83%,
-      21% 21%
-    );
-  }
-
-  91% {
-    -webkit-clip-path: polygon(
-      21% 73%,
-      5% 5%,
-      41% 55%,
-      3% 59%,
-      99% 94%,
-      66% 86%,
-      30% 46%,
-      69% 100%,
-      81% 83%,
-      34% 55%,
-      36% 8%,
-      2% 5%,
-      94% 91%,
-      90% 71%,
-      38% 92%,
-      55% 46%,
-      67% 68%,
-      59% 98%,
-      30% 87%,
-      22% 45%,
-      59% 76%,
-      47% 6%,
-      79% 3%,
-      20% 61%,
-      61% 96%,
-      46% 18%
-    );
-    clip-path: polygon(
-      21% 73%,
-      5% 5%,
-      41% 55%,
-      3% 59%,
-      99% 94%,
-      66% 86%,
-      30% 46%,
-      69% 100%,
-      81% 83%,
-      34% 55%,
-      36% 8%,
-      2% 5%,
-      94% 91%,
-      90% 71%,
-      38% 92%,
-      55% 46%,
-      67% 68%,
-      59% 98%,
-      30% 87%,
-      22% 45%,
-      59% 76%,
-      47% 6%,
-      79% 3%,
-      20% 61%,
-      61% 96%,
-      46% 18%
-    );
-  }
-
-  1%,
-  28%,
-  5%,
-  53%,
-  67%,
-  92% {
-    -webkit-clip-path: none;
-    clip-path: none;
-  }
-}
-
-@keyframes cyberpunk-glitch {
-  0% {
-    -webkit-clip-path: polygon(
-      96% 81%,
-      23% 67%,
-      3% 70%,
-      81% 58%,
-      63% 65%,
-      71% 18%,
-      60% 85%,
-      22% 27%,
-      26% 25%,
-      60% 53%,
-      79% 62%,
-      61% 6%,
-      8% 1%,
-      12% 81%,
-      12% 21%,
-      75% 7%,
-      31% 61%,
-      69% 79%,
-      41% 46%,
-      3% 7%,
-      94% 96%,
-      16% 40%,
-      10% 99%,
-      22% 67%,
-      83% 41%,
-      92% 76%
-    );
-    clip-path: polygon(
-      96% 81%,
-      23% 67%,
-      3% 70%,
-      81% 58%,
-      63% 65%,
-      71% 18%,
-      60% 85%,
-      22% 27%,
-      26% 25%,
-      60% 53%,
-      79% 62%,
-      61% 6%,
-      8% 1%,
-      12% 81%,
-      12% 21%,
-      75% 7%,
-      31% 61%,
-      69% 79%,
-      41% 46%,
-      3% 7%,
-      94% 96%,
-      16% 40%,
-      10% 99%,
-      22% 67%,
-      83% 41%,
-      92% 76%
-    );
-  }
-
-  4% {
-    -webkit-clip-path: polygon(
-      25% 86%,
-      59% 45%,
-      12% 89%,
-      25% 14%,
-      1% 82%,
-      36% 13%,
-      85% 53%,
-      59% 8%,
-      12% 76%,
-      69% 93%,
-      3% 49%,
-      74% 64%,
-      6% 87%,
-      36% 94%,
-      55% 30%,
-      53% 16%,
-      26% 39%,
-      7% 69%,
-      23% 96%,
-      83% 38%,
-      33% 25%,
-      7% 36%,
-      28% 41%,
-      27% 85%,
-      9% 77%,
-      64% 47%
-    );
-    clip-path: polygon(
-      25% 86%,
-      59% 45%,
-      12% 89%,
-      25% 14%,
-      1% 82%,
-      36% 13%,
-      85% 53%,
-      59% 8%,
-      12% 76%,
-      69% 93%,
-      3% 49%,
-      74% 64%,
-      6% 87%,
-      36% 94%,
-      55% 30%,
-      53% 16%,
-      26% 39%,
-      7% 69%,
-      23% 96%,
-      83% 38%,
-      33% 25%,
-      7% 36%,
-      28% 41%,
-      27% 85%,
-      9% 77%,
-      64% 47%
-    );
-  }
-
-  27% {
-    -webkit-clip-path: polygon(
-      39% 7%,
-      81% 81%,
-      97% 19%,
-      37% 54%,
-      19% 66%,
-      98% 57%,
-      10% 45%,
-      60% 82%,
-      10% 96%,
-      46% 53%,
-      70% 68%,
-      89% 24%,
-      6% 45%,
-      81% 29%,
-      68% 54%,
-      77% 32%,
-      90% 44%,
-      28% 36%,
-      66% 72%,
-      12% 98%,
-      83% 10%,
-      11% 71%,
-      71% 78%,
-      11% 93%,
-      50% 29%,
-      36% 36%
-    );
-    clip-path: polygon(
-      39% 7%,
-      81% 81%,
-      97% 19%,
-      37% 54%,
-      19% 66%,
-      98% 57%,
-      10% 45%,
-      60% 82%,
-      10% 96%,
-      46% 53%,
-      70% 68%,
-      89% 24%,
-      6% 45%,
-      81% 29%,
-      68% 54%,
-      77% 32%,
-      90% 44%,
-      28% 36%,
-      66% 72%,
-      12% 98%,
-      83% 10%,
-      11% 71%,
-      71% 78%,
-      11% 93%,
-      50% 29%,
-      36% 36%
-    );
-  }
-
-  51% {
-    -webkit-clip-path: polygon(
-      18% 34%,
-      31% 77%,
-      73% 57%,
-      69% 50%,
-      62% 33%,
-      34% 10%,
-      3% 66%,
-      76% 4%,
-      44% 97%,
-      43% 50%,
-      68% 3%,
-      72% 17%,
-      94% 57%,
-      46% 74%,
-      69% 17%,
-      56% 24%,
-      93% 59%,
-      10% 84%,
-      93% 76%,
-      70% 26%,
-      93% 2%,
-      84% 83%,
-      25% 4%,
-      49% 93%,
-      14% 64%,
-      31% 60%
-    );
-    clip-path: polygon(
-      18% 34%,
-      31% 77%,
-      73% 57%,
-      69% 50%,
-      62% 33%,
-      34% 10%,
-      3% 66%,
-      76% 4%,
-      44% 97%,
-      43% 50%,
-      68% 3%,
-      72% 17%,
-      94% 57%,
-      46% 74%,
-      69% 17%,
-      56% 24%,
-      93% 59%,
-      10% 84%,
-      93% 76%,
-      70% 26%,
-      93% 2%,
-      84% 83%,
-      25% 4%,
-      49% 93%,
-      14% 64%,
-      31% 60%
-    );
-  }
-
-  66% {
-    -webkit-clip-path: polygon(
-      91% 2%,
-      50% 60%,
-      51% 75%,
-      11% 27%,
-      96% 3%,
-      36% 12%,
-      22% 49%,
-      21% 75%,
-      13% 30%,
-      29% 41%,
-      2% 76%,
-      72% 52%,
-      40% 56%,
-      19% 38%,
-      32% 7%,
-      30% 34%,
-      3% 27%,
-      48% 17%,
-      1% 33%,
-      16% 41%,
-      24% 21%,
-      47% 42%,
-      16% 4%,
-      81% 91%,
-      45% 83%,
-      21% 21%
-    );
-    clip-path: polygon(
-      91% 2%,
-      50% 60%,
-      51% 75%,
-      11% 27%,
-      96% 3%,
-      36% 12%,
-      22% 49%,
-      21% 75%,
-      13% 30%,
-      29% 41%,
-      2% 76%,
-      72% 52%,
-      40% 56%,
-      19% 38%,
-      32% 7%,
-      30% 34%,
-      3% 27%,
-      48% 17%,
-      1% 33%,
-      16% 41%,
-      24% 21%,
-      47% 42%,
-      16% 4%,
-      81% 91%,
-      45% 83%,
-      21% 21%
-    );
-  }
-
-  91% {
-    -webkit-clip-path: polygon(
-      21% 73%,
-      5% 5%,
-      41% 55%,
-      3% 59%,
-      99% 94%,
-      66% 86%,
-      30% 46%,
-      69% 100%,
-      81% 83%,
-      34% 55%,
-      36% 8%,
-      2% 5%,
-      94% 91%,
-      90% 71%,
-      38% 92%,
-      55% 46%,
-      67% 68%,
-      59% 98%,
-      30% 87%,
-      22% 45%,
-      59% 76%,
-      47% 6%,
-      79% 3%,
-      20% 61%,
-      61% 96%,
-      46% 18%
-    );
-    clip-path: polygon(
-      21% 73%,
-      5% 5%,
-      41% 55%,
-      3% 59%,
-      99% 94%,
-      66% 86%,
-      30% 46%,
-      69% 100%,
-      81% 83%,
-      34% 55%,
-      36% 8%,
-      2% 5%,
-      94% 91%,
-      90% 71%,
-      38% 92%,
-      55% 46%,
-      67% 68%,
-      59% 98%,
-      30% 87%,
-      22% 45%,
-      59% 76%,
-      47% 6%,
-      79% 3%,
-      20% 61%,
-      61% 96%,
-      46% 18%
-    );
-  }
-
-  1%,
-  28%,
-  5%,
-  53%,
-  67%,
-  92% {
-    -webkit-clip-path: none;
-    clip-path: none;
-  }
-}
-
 .swiper .swiper-pagination {
   position: unset;
   margin-top: 20px;
 }
 .swiper .swiper-pagination-bullet {
-  background-color: #75fcce;
+  background-color: #ec318a;
   height: 22px;
   width: 6px;
   border-radius: 4px;
 }
 .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
-  color: #75fcce;
+  color: #ec318a;
 }
 
 .games-swiper .swiper-wrapper {
   transition-timing-function: linear;
 }
-@media screen and (max-width: 900px) {
+
+.lekson,
+.dash-description-pattern {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  border-top: 8px dashed red;
+  border-bottom: 2px dashed orange;
+  opacity: 0.3;
+  top: 8%;
+  transform: translateX(-40%) rotate(-30deg);
+  left: 0;
+  pointer-events: none;
+}
+.dash-description-pattern {
+  width: 120%;
+  transform: translateX(-10%) rotate(15deg);
+  top: 30%;
+  z-index: -1;
+  border-top-color: #ec318a;
+  filter: blur(1px);
+}
+.kekson {
+  position: absolute;
+
+  left: 10%;
+  bottom: 5%;
+  color: grey;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  opacity: 0.7;
+
+  z-index: 1;
+  font-style: monospace;
+  pointer-events: none;
+
+  letter-spacing: 5px;
+}
+.pattern-text-advantages {
+  right: 8%;
+  bottom: 15%;
+  left: unset;
+  font-size: 1.3rem;
+  letter-spacing: 10px;
+}
+.price-light,
+.advantages-light {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+
+  height: 80px;
+
+  top: 0;
+  position: absolute;
+  right: 10%;
+}
+.price-light div,
+.advantages-light div {
+  width: 6px;
+  height: 100%;
+  background-color: #fcd222;
+  margin-left: auto;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0.5rem 0px #fcd222, 0px 0px 2rem 0px #fcd222;
+}
+.price-light div:nth-child(2),
+.advantages-light div:nth-child(2) {
+  height: 150%;
+  animation: border-flicker 2s linear infinite;
+}
+.price-light div:nth-child(3) {
+  height: 160%;
+}
+.advantages-light {
+  transform: rotate(-90deg);
+  height: 120px;
+  left: 10%;
+  right: unset;
+}
+.advantages-light div {
+  background-color: #ec318a;
+  box-shadow: inset 0px 0px 0.5rem 0px #ec318a, 0px 0px 2rem 0px #ec318a;
+}
+
+.glowing-btn {
+  --glow-color: #61efff;
+
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border: 3px solid var(--glow-color);
+  /* background-color: rgba(97, 239, 255, 0.3); */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* background: none; */
+  border-radius: 0.4rem;
+  perspective: 2em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after,
+.book-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover,
+.book-button:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt,
+.book-button .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after,
+.book-button:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-text-animation {
+  transform-style: preserve-3d;
+  animation: text-anim 3s ease-in-out infinite;
+  transform: rotateY(3deg);
+}
+@keyframes text-anim {
+  50% {
+    transform: rotateY(20deg) skewY(-3deg);
+  }
+}
+.book-button {
+  --glow-color: #61efff;
+
+  position: fixed !important;
+  bottom: 120px;
+  right: 30px;
+  z-index: 2;
+  min-width: 130px;
+
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.4rem 1.2rem;
+  border: 3px solid var(--glow-color);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.4rem;
+  perspective: 2em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: unset;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+.book-button .glowing-txt {
+  margin-right: unset;
+  animation: border-flicker 7s linear infinite;
+}
+
+@media only screen and (min-width: 900px) {
+  .helmet-animation img {
+    pointer-events: none;
+    transform: scale(1.3);
+    transition: 0.3s transform;
+  }
+  .helmet-animation:hover img {
+    transform-style: preserve-3d;
+    transform: scale(1.6) rotateZ(-6deg) rotateY(15deg);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .advantages-item {
+    max-width: calc(50% - 1px);
+  }
+  .laks .advantages-item:last-of-type {
+    display: none;
+  }
+  .book-button {
+    display: none;
+  }
   .swiper .swiper-button-next,
   .swiper .swiper-button-prev {
     display: none;
   }
+  .kekson {
+    bottom: -1%;
+    right: 2%;
+    left: unset;
+  }
 }
-/* .book-btn {
-  animation: color-change 4s linear infinite;
+@media screen and (max-width: 615px) {
+  .laks .advantages-item:nth-child(3),
+  .paks .advantages-item:nth-child(3) {
+    margin: -59px auto 0;
+  }
 }
 
-@keyframes color-change {
-  0% {
-    color: #fff;
+@media screen and (max-width: 600px) {
+  .hero-section {
+    max-height: 700px;
   }
-  30% {
-    color: #75fcce;
+  .glowing-btn {
+    font-size: 1.2rem;
   }
-  60% {
-    color: pink;
+  .lekson {
+    display: none;
   }
-  90% {
-    color: #fff;
+
+  .price-light {
+    top: -2%;
   }
-} */
+  .advantages-light {
+    top: 6%;
+  }
+  .hero-section:after {
+    height: 20%;
+  }
+  .logotext {
+    font-size: 2.5rem;
+
+    transform: rotateY(-5deg);
+
+    box-shadow: inset 0px 0px 0.5em 0px #f7038c, 0px 0px 0.5em 0px #f7038c,
+      0px 0 60px 20px rgba(0, 0, 0, 0.4), -20px 0 60px 20px rgba(0, 0, 0, 0.7),
+      20px 0 60px 20px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.fade-section {
+  position: relative;
+}
+.fade-section:before,
+.fade-section:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10%;
+}
+.fade-section:before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 22, 26, 1),
+    rgba(20, 22, 26, 0)
+  );
+}
+.fade-section:after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(20, 22, 26, 1), rgba(20, 22, 26, 0));
+}

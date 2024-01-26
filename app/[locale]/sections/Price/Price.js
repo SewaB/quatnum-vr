@@ -8,17 +8,23 @@ export default function Price() {
   const content = {
     title: t('title'),
     subtitle: t('subtitle'),
-    vrSessionTitle: t('vrSessionTitle'),
-    vrSessionDuration: t('vrSessionDuration'),
-    vrSessionButton: t('vrSessionButton'),
-    giftCardTitle: t('giftCardTitle'),
-    giftCardDuration: t('giftCardDuration'),
-    giftCardButton: t('giftCardButton'),
-    eventTitle: t('eventTitle'),
-    eventInfo1: t('eventInfo1'),
-    eventInfo2: t('eventInfo2'),
-    eventButton: t('eventButton')
+    vrSession: t('vrSession'),
+    weekDay: t('weekDay'),
+    weekDayEvening: t('weekDayEvening'),
+    andWeekend: t('andWeekend'),
+    vrParty: t('vrParty'),
+    rentClub: t('rentClub'),
+    closeEvent: t('closeEvent'),
+    partyInclude: t('partyInclude'),
+
+    uah: t('uah'),
+    fromHours: t('fromHours'),
+    from: t('from'),
+    certificate: t('certificate'),
+    book: t('book'),
+    buy: t('buy')
   }
+
   const modalContent = {
     title: t('modalTitle'),
     phone: t('phone'),

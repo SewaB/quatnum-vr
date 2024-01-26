@@ -9,15 +9,16 @@ export default function Rules() {
   const t = useTranslations('rules')
 
   return (
-    <section id='rules' className='rules-section'>
+    <section id='rules' className='fade-section'>
       <Image
         src='/bg2.png'
         fill
+        objectFit='cover'
+        objectPosition='bottom'
         style={{
-          objectFit: 'cover',
           zIndex: -1,
-          opacity: 0.3,
-          transform: 'scale(-1,1)'
+          opacity: 0.2
+          // transform: 'scale(-1,1)'
         }}
         alt=''
       />
@@ -30,12 +31,19 @@ export default function Rules() {
           color: '#fff'
         }}
       >
-        <Box sx={{ display: 'flex', justifyContent: 'center', mb: '4rem' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            mb: { xs: '3rem', sm: '4rem' }
+          }}
+        >
           <Typography
             variant='h6'
             sx={{
-              fontSize: { xs: '1.8rem', tb: '2.4rem' },
-              fontWeight: 'bold'
+              fontSize: { xs: '1.8rem', md: '2.4rem' },
+              fontWeight: 'bold',
+              color: '#fcd222'
             }}
           >
             {t('title')}
@@ -74,7 +82,10 @@ const RuleItem = ({ title, text, noBorder }) => (
       height: '100%'
     }}
   >
-    <Typography gutterBottom sx={{ fontWeight: 'bold', color: '#75fcce' }}>
+    <Typography
+      gutterBottom
+      sx={{ fontWeight: 'bold', color: '#61efff', fontSize: '1.05rem' }}
+    >
       {title}
     </Typography>
     <Typography>{text}</Typography>

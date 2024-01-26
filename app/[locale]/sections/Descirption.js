@@ -13,114 +13,103 @@ export default function Descirption() {
   const t = useTranslations('descirption')
 
   return (
-    <Box component='section' id='descirption'>
+    <Box component='section' id='descirption' sx={{ position: 'relative' }}>
       <Container
         maxWidth='lg'
         sx={{
-          py: { xs: 6, md: 12 },
           display: 'flex',
           flexDirection: 'column',
+          alignItems: 'center',
+          py: { xs: 6, md: 12 },
           gap: { xs: '2rem', md: '4rem' }
         }}
       >
-        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
-          <RevealOnAppear>
-            <Typography
-              variant='h6'
-              sx={{
-                fontSize: { xs: '1.8rem', tb: '2.4rem' },
-                fontWeight: 'bold'
-              }}
-            >
-              {t('title')}
-            </Typography>
-          </RevealOnAppear>
-        </Box>
+        <div className='dash-description-pattern' />
 
-        <Grid container columnSpacing={{ sm: 4, md: 8 }} rowSpacing={4}>
-          <Grid item xs={12} sm={6} md={5} sx={{ ml: { xs: '', md: '8.33%' } }}>
-            <RevealOnAppear transitionDelay='250ms'>
-              <AboutItem
-                title={t('playLearnConnect')}
-                image='/vrWorld.svg'
-                text={t('playLearnConnectText')}
-              />
-            </RevealOnAppear>
-          </Grid>
-          <Grid item xs={12} sm={6} md={5}>
-            <RevealOnAppear transitionDelay='500ms'>
-              <AboutItem
-                title={t('experienceFuture')}
-                image='/reality.svg'
-                text={t('experienceFutureText')}
-              />
-            </RevealOnAppear>
-          </Grid>
-        </Grid>
-
-        <Grid container columnSpacing={{ sm: 4, md: 8 }} rowSpacing={4}>
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={5}
-            sx={{ ml: { xs: '', md: '16.66%' } }}
+        <RevealOnAppear transitionDelay='600ms'>
+          <Typography
+            variant='h6'
+            gutterBottom
+            sx={{
+              fontSize: { xs: '1.8rem', tb: '2.4rem' },
+              fontWeight: 'bold'
+            }}
           >
-            <RevealOnAppear transitionDelay='750ms'>
-              <AboutItem
-                title={t('noLimits')}
-                image='/around.svg'
-                text={t('noLimitsText')}
+            {t('title')}
+          </Typography>
+        </RevealOnAppear>
+        <Grid container spacing={2}>
+          <RevealOnAppear transitionDelay='600ms'>
+            <Grid item xs={12} sm={6} md={3}>
+              <Item
+                title={t('timeTravel')}
+                text={t('timeTravelText')}
+                image='/description/time.svg'
+                className='animate-time'
               />
-            </RevealOnAppear>
-          </Grid>
-          <Grid item xs={12} sm={6} md={5}>
-            <RevealOnAppear transitionDelay='1000ms'>
-              <AboutItem
-                title={t('muchEasier')}
-                image='/pacman.svg'
-                text={t('muchEasierText')}
+            </Grid>
+          </RevealOnAppear>
+          <RevealOnAppear transitionDelay='900ms'>
+            <Grid item xs={12} sm={6} md={3}>
+              <Item
+                title={t('immersiveSoundscape')}
+                text={t('immersiveSoundscapeText')}
+                image='/description/sound.svg'
+                className='animate-sound'
               />
-            </RevealOnAppear>
-          </Grid>
+            </Grid>
+          </RevealOnAppear>
+
+          <RevealOnAppear transitionDelay='1200ms'>
+            <Grid item xs={12} sm={6} md={3}>
+              <Item
+                title={t('unleashCreativity')}
+                text={t('unleashCreativityText')}
+                image='/description/paint.svg'
+                className='animate-paint'
+              />
+            </Grid>
+          </RevealOnAppear>
+          <RevealOnAppear transitionDelay='1500ms'>
+            <Grid item xs={12} sm={6} md={3}>
+              <Item
+                title={t('fitnessFun')}
+                text={t('fitnessFunText')}
+                image='/description/sports.svg'
+                className='animate-snowboard'
+              />
+            </Grid>
+          </RevealOnAppear>
         </Grid>
       </Container>
     </Box>
   )
 }
 
-const AboutItem = ({ title, image, text }) => (
+const Item = ({ title, image, text, className }) => (
   <Box
     sx={{
       display: 'flex',
-      gap: { xs: '1.5rem', md: '2rem' },
-      alignItems: 'flex-start'
+      flexDirection: 'column',
+      background: 'linear-gradient(90deg, #2f2f33, #14161a)',
+      p: 2,
+      height: '100%',
+      gap: '1rem',
+      maxWidth: '400px',
+      mx: 'auto'
     }}
   >
-    <Box
+    <Image src={image} width={36} height={36} alt='' className={className} />
+    <Typography
       sx={{
-        p: { xs: 2, md: 3 },
-        border: '3px solid #75fcce',
-        borderRadius: '50%',
-        boxShadow: '0px 0px 12px -2px #fff'
+        color: '#f3c82e',
+        fontSize: '1.2rem',
+        fontWeight: 'bold',
+        lineHeight: '1.3'
       }}
     >
-      <Box
-        sx={{
-          width: { xs: '2.5rem', md: '3rem' },
-          height: { xs: '2.5rem', md: '3rem' },
-          position: 'relative'
-        }}
-      >
-        <Image src={image} fill alt='' />
-      </Box>
-    </Box>
-
-    <div>
-      <Typography gutterBottom sx={{ fontWeight: 'bold' }}>
-        {title}
-      </Typography>
-      <Typography>{text}</Typography>
-    </div>
+      {title}
+    </Typography>
+    <Typography>{text}</Typography>
   </Box>
 )
