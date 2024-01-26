@@ -112,8 +112,7 @@ const Item = ({ title, text, image }) => (
         src={image}
         fill
         alt=''
-        objectFit='cover'
-        style={{ opacity: 0.3 }}
+        style={{ opacity: 0.3, objectFit: 'cover' }}
       />
       <Typography
         sx={{

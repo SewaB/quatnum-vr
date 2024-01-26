@@ -7,7 +7,7 @@ export default function Booking({ title }) {
   return (
     <Box component='section' id='booking' className='fade-section'>
       <Image
-        src='/bg1.png'
+        src='/images/bg1.png'
         fill
         style={{
           objectFit: 'cover',
@@ -45,7 +45,7 @@ export default function Booking({ title }) {
         </Box>
         {/* <div id='calendar_container'></div> */}
         <Image
-          src='/bookingPlaceholder.jpg'
+          src='/images/bookingPlaceholder.jpg'
           // fill'
           width={800}
           height={800}

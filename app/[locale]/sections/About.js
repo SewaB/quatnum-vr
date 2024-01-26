@@ -54,10 +54,10 @@ export default function About() {
                 }}
               >
                 <Image
-                  src='/aboutImg.png'
+                  src='/images/aboutImg.png'
                   fill
                   alt=''
-                  objectFit='contain'
+                  style={{ objectFit: 'contain' }}
                   sizes='(max-width: 768px) 75vw, 100vw'
                 />
               </Box>
@@ -128,10 +128,10 @@ export default function About() {
                 className='helmet-animation'
               >
                 <Image
-                  src='/helmet.webp'
+                  src='/images/helmet.webp'
                   fill
                   alt=''
-                  objectFit='contain'
+                  style={{ objectFit: 'contain' }}
                   sizes='(max-width: 768px) 75vw, 110vw'
                 />
               </Box>

@@ -25,15 +25,15 @@ export default function Price() {
     buy: t('buy')
   }
 
-  const modalContent = {
-    title: t('modalTitle'),
-    phone: t('phone'),
-    name: t('name'),
-    date: t('date'),
-    address: t('address'),
-    comment: t('comment'),
-    commentPlaceholder: t('commentPlaceholder'),
-    button: t('button')
-  }
-  return <PriceContainer content={content} modalContent={modalContent} />
+  // const modalContent = {
+  //   title: t('modalTitle'),
+  //   phone: t('phone'),
+  //   name: t('name'),
+  //   date: t('date'),
+  //   address: t('address'),
+  //   comment: t('comment'),
+  //   commentPlaceholder: t('commentPlaceholder'),
+  //   button: t('button')
+  // }
+  return <PriceContainer content={content} />
 }

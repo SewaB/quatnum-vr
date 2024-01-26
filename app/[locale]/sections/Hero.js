@@ -17,7 +17,7 @@ export default function Hero() {
     <section id='hero' className='hero-section'>
       <Toolbar id='header' />
       <Image
-        src='/hero.jpg'
+        src='/images/hero.jpg'
         fill
         quality={100}
         style={{ opacity: 0.9, objectFit: 'cover' }}

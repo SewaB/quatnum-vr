@@ -11,14 +11,13 @@ export default function Rules() {
   return (
     <section id='rules' className='fade-section'>
       <Image
-        src='/bg2.png'
+        src='/images/bg2.png'
         fill
-        objectFit='cover'
-        objectPosition='bottom'
         style={{
           zIndex: -1,
-          opacity: 0.2
-          // transform: 'scale(-1,1)'
+          opacity: 0.2,
+          objectFit: 'cover',
+          objectPosition: 'bottom'
         }}
         alt=''
       />

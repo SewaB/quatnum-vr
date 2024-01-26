@@ -57,7 +57,7 @@ export default function Price({ content }) {
           <Grid item xs={12} md={4}>
             <Item title={content.vrSession} buttonText={content.book}>
               <Image
-                src='/13.jpg'
+                src='/images/player.jpg'
                 fill
                 style={{
                   objectFit: 'cover',
@@ -116,7 +116,7 @@ export default function Price({ content }) {
           <Grid item xs={12} md={4}>
             <Item title={content.vrParty} buttonText={content.book}>
               <Image
-                src='/party.jpg'
+                src='/images/party.jpg'
                 fill
                 style={{
                   objectFit: 'cover',
@@ -176,7 +176,7 @@ export default function Price({ content }) {
           <Grid item xs={12} md={4}>
             <Item title='PS 5' buttonText={content.book}>
               <Image
-                src='/ps.jpg'
+                src='/images/ps.jpg'
                 fill
                 style={{
                   objectFit: 'cover',
@@ -257,7 +257,7 @@ export default function Price({ content }) {
                 }}
               >
                 <Image
-                  src='/gift.png'
+                  src='/imgaes/gift.png'
                   fill
                   style={{
                     objectFit: 'cover'
