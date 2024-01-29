@@ -23,7 +23,6 @@ export default function Price({ content }) {
         }}
       >
         <div className='lekson' />
-        <div className='kekson'>Start _now</div>
         <div className='price-light'>
           <div />
           <div />
@@ -35,21 +34,41 @@ export default function Price({ content }) {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            mb: { xs: '2rem', sm: '4rem' }
+            mb: { xs: '2rem', sm: '3rem' }
           }}
         >
           <Typography
             variant='h6'
             sx={{
-              fontSize: { xs: '1.8rem', tb: '2.4rem' },
-              fontWeight: 'bold'
+              fontSize: { xs: '1.8rem', md: ' 2rem' },
+              fontWeight: 'bold',
+              color: '#fff'
             }}
           >
             {content.title}
           </Typography>
+
           <Typography
-            sx={{ mt: 3, color: '#FFF', fontSize: '1.2rem', color: '#bdbdbd' }}
+            sx={{
+              mt: 3,
+              fontSize: '1.4rem',
+
+              color: '#000',
+              backgroundColor: '#fcd222',
+              fontWeight: 'bold',
+              position: 'relative',
+              borderRadius: 0,
+              textAlign: 'center',
+              py: { xs: 2, sm: 4 },
+              px: { xs: 2, sm: 5 },
+              lineHeight: 'normal',
+              clipPath:
+                'polygon(0 0, 20% 0, 20% 8%, 50% 8%, 50% 0%, 95% 0, 100% 30%, 100% 70%, 90% 70%, 90% 75%, 100% 75%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 5% 100%, 0 70%)'
+            }}
           >
+            {content.saleText}
+          </Typography>
+          <Typography sx={{ mt: 3, fontSize: '1.2rem', color: '#bdbdbd' }}>
             {content.subtitle}
           </Typography>
         </Box>
@@ -80,12 +99,47 @@ export default function Price({ content }) {
                 </Typography>
                 <Typography
                   sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
                     fontWeight: 'bold',
                     color: '#ec318a'
                   }}
                 >
-                  300 {content.uah}
+                  <Typography
+                    component='span'
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      fontSize: { xs: '1.7rem', sm: '2rem' },
+
+                      fontWeight: 'bold',
+                      '&:before': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(25deg)'
+                      },
+                      '&:after': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(335deg)'
+                      }
+                    }}
+                  >
+                    350
+                  </Typography>
+                  175 {content.uah}
                 </Typography>
               </Box>
               <Box>
@@ -102,12 +156,47 @@ export default function Price({ content }) {
                 </Typography>
                 <Typography
                   sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
                     fontWeight: 'bold',
                     color: '#ec318a'
                   }}
                 >
-                  350 {content.uah}
+                  <Typography
+                    component='span'
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      fontSize: { xs: '1.7rem', sm: '2rem' },
+
+                      fontWeight: 'bold',
+                      '&:before': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(25deg)'
+                      },
+                      '&:after': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(335deg)'
+                      }
+                    }}
+                  >
+                    400
+                  </Typography>
+                  200 {content.uah}
                 </Typography>
               </Box>
             </Item>
@@ -164,12 +253,48 @@ export default function Price({ content }) {
 
               <Typography
                 sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1ch',
                   fontSize: { xs: '1.7rem', sm: '2rem' },
                   fontWeight: 'bold',
                   color: '#ec318a'
                 }}
               >
-                {content.from} 1500 {content.uah}
+                {content.from}
+                <Typography
+                  component='span'
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    fontSize: { xs: '1.7rem', sm: '2rem' },
+
+                    fontWeight: 'bold',
+                    '&:before': {
+                      content: "''",
+                      left: '-20%',
+                      width: '130%',
+                      height: '2.5px',
+                      backgroundColor: '#fcd222',
+                      position: 'absolute',
+                      transform: 'rotate(25deg)'
+                    },
+                    '&:after': {
+                      content: "''",
+                      left: '-20%',
+                      width: '130%',
+                      height: '2.5px',
+                      backgroundColor: '#fcd222',
+                      position: 'absolute',
+                      transform: 'rotate(335deg)'
+                    }
+                  }}
+                >
+                  2000
+                </Typography>
+                1000 {content.uah}
               </Typography>
             </Item>
           </Grid>
@@ -200,13 +325,47 @@ export default function Price({ content }) {
                 </Typography>
                 <Typography
                   sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
-
                     fontWeight: 'bold',
                     color: '#ec318a'
                   }}
                 >
-                  200 {content.uah}
+                  <Typography
+                    component='span'
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      fontSize: { xs: '1.7rem', sm: '2rem' },
+
+                      fontWeight: 'bold',
+                      '&:before': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(25deg)'
+                      },
+                      '&:after': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(335deg)'
+                      }
+                    }}
+                  >
+                    250
+                  </Typography>
+                  125 {content.uah}
                 </Typography>
               </Box>
               <Box>
@@ -223,13 +382,47 @@ export default function Price({ content }) {
                 </Typography>
                 <Typography
                   sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
-
                     fontWeight: 'bold',
                     color: '#ec318a'
                   }}
                 >
-                  250 {content.uah}
+                  <Typography
+                    component='span'
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      fontSize: { xs: '1.7rem', sm: '2rem' },
+
+                      fontWeight: 'bold',
+                      '&:before': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(25deg)'
+                      },
+                      '&:after': {
+                        content: "''",
+                        left: '-20%',
+                        width: '130%',
+                        height: '2.5px',
+                        backgroundColor: '#fcd222',
+                        position: 'absolute',
+                        transform: 'rotate(335deg)'
+                      }
+                    }}
+                  >
+                    300
+                  </Typography>
+                  150 {content.uah}
                 </Typography>
               </Box>
             </Item>
@@ -257,7 +450,7 @@ export default function Price({ content }) {
                 }}
               >
                 <Image
-                  src='/imgaes/gift.png'
+                  src='/images/gift.png'
                   fill
                   style={{
                     objectFit: 'cover'
@@ -272,10 +465,48 @@ export default function Price({ content }) {
                   fontSize: { xs: '1.7rem', sm: '2rem' },
                   fontWeight: 'bold',
                   color: '#ec318a',
-                  mt: 1
+                  mt: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1ch',
+                  fontSize: { xs: '1.7rem', sm: '2rem' },
+                  fontWeight: 'bold',
+                  color: '#ec318a'
                 }}
               >
-                350 {content.uah}
+                <Typography
+                  component='span'
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    fontSize: { xs: '1.7rem', sm: '2rem' },
+
+                    fontWeight: 'bold',
+                    '&:before': {
+                      content: "''",
+                      left: '-20%',
+                      width: '130%',
+                      height: '2.5px',
+                      backgroundColor: '#fcd222',
+                      position: 'absolute',
+                      transform: 'rotate(25deg)'
+                    },
+                    '&:after': {
+                      content: "''",
+                      left: '-20%',
+                      width: '130%',
+                      height: '2.5px',
+                      backgroundColor: '#fcd222',
+                      position: 'absolute',
+                      transform: 'rotate(335deg)'
+                    }
+                  }}
+                >
+                  400
+                </Typography>
+                200 {content.uah}
               </Typography>
             </Item>
           </Grid>

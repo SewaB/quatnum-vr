@@ -1,7 +1,7 @@
 import { useLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
 import '../globals.css'
-// import Script from 'next/script'
+import Script from 'next/script'
 
 const uaMetadata = {
   title: 'QuantumVR | Віртуальна реальність в Києві',
@@ -135,7 +135,7 @@ export default function RootLayout({ children, params }) {
       </head>
       <body>
         {children}
-        {/* <Script
+        <Script
           async
           defer
           strategy='lazyOnload'
@@ -143,8 +143,8 @@ export default function RootLayout({ children, params }) {
           id='calendar-widget'
           dangerouslySetInnerHTML={{
             __html: `
-              window.bookingCompanyIds = ["-NgykBXNz84_cQxU9zjS"];
-              window.bookingWidgetLang = 'lt';
+            window.bookingCompanyIds = ["-NpDsJV2ErBgnP7o2fWm"];
+              window.bookingWidgetLang = 'ua';
               window.bookingWidgetTheme = 'transparent';
               window.bookingWidgetStyles = {
                 container: {
@@ -154,49 +154,56 @@ export default function RootLayout({ children, params }) {
                   border: 'unset'
                 },
                 calendar_week: {
-                  color:'#75fcce'
+                  color:'#61efff'
                 },
                 widget_calendar_day: {
+                  backdropFilter:'blur(10px)',
                   '& span': {
-                    color:'#75fcce!important'
+                    color:'#61efff!important'
                   }
                 },
                 calendar_header_title: {
-                  color:'#75fcce'
+                  color:'#61efff'
                 },
                 calendar_header_button: {
-                  color:'#75fcce',
-                  fill: '#75fcce'
+                  color:'#61efff',
+                  fill: '#61efff'
                 },
                 widget_calendar_day_span: {
                   wordBreak: 'break-all'
                 },
                 modal_minus: {
                   '&:before': {
-                    backgroundColor:"#b40c9b"
+                    backgroundColor:"#ec318a"
                   },
                 },
                 modal_plus: {
                   '&:before': {
-                    backgroundColor:"#b40c9b"
+                    backgroundColor:"#ec318a"
                   },
                   '&:after': {
-                    backgroundColor:"#b40c9b"
+                    backgroundColor:"#ec318a"
                   }
                 },
                 modal_button: {
-                  backgroundColor:'#b40c9b',
-                  borderColor:'#b40c9b',
-                  '&:hover':{
-                    backgroundColor:'#7f0b6e',
-                    borderColor:'#7f0b6e',
-                    color:'#fff'
+                  clipPath:
+                  'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)',
+                  textTransform: 'capitalize',
+                  backgroundColor: '#fcd222',
+                  borderRadius: 0,
+                  border:0,
+                  fontWeight: 'bold',
+                  minWidth: '140px',
+                  color: '#000',
+                  '&:hover': {
+                    color: '#fff',
+                    backgroundColor: '#ec318a',
                   }
                 },
                 modal_recall: {
                   '& .widget_recall-checkbox>input:checked+span:before':{
-                    backgroundColor:'#b40c9b!important',
-                    borderColor:'#b40c9b!important',
+                    backgroundColor:'#ec318a!important',
+                    borderColor:'#ec318a!important',
                   }
                 }
               
@@ -216,7 +223,7 @@ export default function RootLayout({ children, params }) {
                 head.appendChild(jsScript);
               }, 2000);`
           }}
-        /> */}
+        />
       </body>
     </html>
   )

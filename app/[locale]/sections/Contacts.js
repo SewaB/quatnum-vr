@@ -44,7 +44,7 @@ export default function Footer() {
           variant='h6'
           gutterBottom
           sx={{
-            fontSize: { xs: '1.8rem', tb: '2.4rem' },
+            fontSize: { xs: '1.8rem', md: ' 2rem' },
             fontWeight: 'bold',
             color: '#f8bdc7'
           }}

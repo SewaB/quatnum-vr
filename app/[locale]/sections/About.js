@@ -70,7 +70,7 @@ export default function About() {
                 gutterBottom
                 variant='h6'
                 sx={{
-                  fontSize: { xs: '1.8rem', tb: '2.4rem' },
+                  fontSize: { xs: '1.8rem', md: ' 2rem' },
                   fontWeight: 'bold',
                   marginTop: { xs: '1rem', sm: 'unset' }
                 }}
@@ -102,7 +102,7 @@ export default function About() {
                 gutterBottom
                 variant='h6'
                 sx={{
-                  fontSize: { xs: '1.8rem', tb: '2.4rem' },
+                  fontSize: { xs: '1.8rem', md: ' 2rem' },
                   fontWeight: 'bold'
                 }}
               >

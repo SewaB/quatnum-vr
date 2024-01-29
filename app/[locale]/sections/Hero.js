@@ -47,7 +47,7 @@ export default function Hero() {
             position: 'absolute',
             top: { md: '10rem' },
             left: { md: '1.5rem' },
-            fontSize: { xs: '2rem', sm: '2.6rem', md: '3.5rem' },
+            fontSize: { xs: '2.1rem', sm: '2.6rem', md: '3.5rem' },
             lineHeight: 1.4,
             textShadow: '1px 1px 8px black, 0 0 1em #f7038c, 0 0 0.4em blue',
             color: '#fcd222',
@@ -80,13 +80,18 @@ export default function Hero() {
           href='#about'
           component='a'
           sx={{
-            position: 'absolute',
-            right: { sm: '0' },
-            top: '2rem',
-
             display: 'flex',
             flexDirection: 'column',
+            alignItems: 'center',
+
             padding: { xs: '0.9rem 1.5rem 0.8rem', sm: '2rem 1rem' },
+            maxWidth: { xs: '88%', sm: 'unset' },
+            position: 'absolute',
+            right: 0,
+            mx: 'auto',
+            left: { xs: '0', sm: 'unset' },
+            top: '2rem',
+
             backgroundColor: 'rgba(0, 0, 0, 0.7)',
             borderRadius: '0.4rem',
             textShadow: '0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em #f7038c',
@@ -96,7 +101,7 @@ export default function Hero() {
             },
 
             color: '#f7038c',
-            fontSize: { xs: '2.3rem', sm: '3.5rem' },
+            fontSize: { xs: '3rem', sm: '3.5rem' },
             fontWeight: 900,
             textAlign: 'center',
 

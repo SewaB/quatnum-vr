@@ -12,7 +12,7 @@ export default function Booking({ title }) {
         style={{
           objectFit: 'cover',
           zIndex: -1,
-          opacity: 0.2
+          opacity: 0.1
         }}
         alt=''
       />
@@ -23,7 +23,8 @@ export default function Booking({ title }) {
         sx={{
           py: { xs: 6, md: 12 },
           color: '#fff',
-          position: 'relative'
+          position: 'relative',
+          fontFamily: '"Roboto","Helvetica","Arial",sans-serif'
         }}
       >
         <Box
@@ -36,25 +37,14 @@ export default function Booking({ title }) {
           <Typography
             variant='h6'
             sx={{
-              fontSize: { xs: '1.8rem', tb: '2.4rem' },
+              fontSize: { xs: '1.8rem', md: ' 2rem' },
               fontWeight: 'bold'
             }}
           >
             {title}
           </Typography>
         </Box>
-        {/* <div id='calendar_container'></div> */}
-        <Image
-          src='/images/bookingPlaceholder.jpg'
-          // fill'
-          width={800}
-          height={800}
-          style={{
-            objectFit: 'fill',
-            width: '100%'
-          }}
-          alt=''
-        />
+        <div id='calendar_container'></div>
       </Container>
     </Box>
   )

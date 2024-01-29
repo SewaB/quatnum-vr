@@ -279,11 +279,11 @@ export default function NavbarContainer({ content, locale }) {
 
                   '&:hover': {
                     color: '#fff',
-                    backgroundColor: '#ec318a',
+                    backgroundColor: '#ec318a'
                     // boxShadow: '0px 0px 2rem 0px #fff',
-                    '&:after': {
-                      opacity: 1
-                    }
+                    // '&:after': {
+                    //   opacity: 1
+                    // }
                   }
                 }}
               >

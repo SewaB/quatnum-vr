@@ -241,29 +241,7 @@ html {
   border-top-color: #ec318a;
   filter: blur(1px);
 }
-.kekson {
-  position: absolute;
 
-  left: 10%;
-  bottom: 5%;
-  color: grey;
-  font-size: 1.5rem;
-  white-space: nowrap;
-  opacity: 0.7;
-
-  z-index: 1;
-  font-style: monospace;
-  pointer-events: none;
-
-  letter-spacing: 5px;
-}
-.pattern-text-advantages {
-  right: 8%;
-  bottom: 15%;
-  left: unset;
-  font-size: 1.3rem;
-  letter-spacing: 10px;
-}
 .price-light,
 .advantages-light {
   display: flex;
@@ -572,11 +550,6 @@ html {
   .swiper .swiper-button-next,
   .swiper .swiper-button-prev {
     display: none;
-  }
-  .kekson {
-    bottom: -1%;
-    right: 2%;
-    left: unset;
   }
 }
 @media screen and (max-width: 615px) {

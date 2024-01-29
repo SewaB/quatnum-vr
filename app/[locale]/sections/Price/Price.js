@@ -7,6 +7,7 @@ export default function Price() {
 
   const content = {
     title: t('title'),
+    saleText: t('saleText'),
     subtitle: t('subtitle'),
     vrSession: t('vrSession'),
     weekDay: t('weekDay'),

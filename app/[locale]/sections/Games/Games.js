@@ -239,7 +239,7 @@ export default function Games() {
             variant='h6'
             gutterBottom
             sx={{
-              fontSize: { xs: '1.8rem', tb: '2.4rem' },
+              fontSize: { xs: '1.8rem', md: ' 2rem' },
               fontWeight: 'bold',
               textAlign: 'center'
             }}
@@ -252,7 +252,7 @@ export default function Games() {
           <Typography
             variant='h6'
             sx={{
-              fontSize: { xs: '1.4rem', tb: '2rem' },
+              fontSize: { xs: '1.4rem', md: '1.6rem' },
               textAlign: 'center'
             }}
           >

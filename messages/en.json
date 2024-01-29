@@ -83,6 +83,7 @@
   },
   "price": {
     "title": "Price",
+    "saleText": "Sale! 50% off on all services to celebrate the opening of the club!",
     "subtitle": "Cost is indicated for 60 minutes",
     "vrSession": "VR session",
     "weekDay": "Weekdays 11:00 AM - 6:00 PM",
