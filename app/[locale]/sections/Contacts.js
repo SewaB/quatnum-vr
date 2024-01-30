@@ -110,7 +110,7 @@ export default function Footer() {
             <EmailIcon />
             <div>
               <Typography>{t('email')}</Typography>
-              <Typography component='a' href='mailto:@gmail.com'>
+              <Typography component='a' href='mailto:quantumvr24@gmail.com'>
                 <b>quantumvr@gmail.com</b>
               </Typography>
             </div>

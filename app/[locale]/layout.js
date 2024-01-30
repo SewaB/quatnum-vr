@@ -9,12 +9,12 @@ const uaMetadata = {
     'Зануртеся в світ нескінченних вражень в QuantumVR, де Віртуальна Реальність зустрічає душу Києва. Випустіть ексцитацію за допомогою захоплюючих симуляцій, мультиплеєрних ігор та футуристичних пригод.',
   keywords: ['QuantumVR', 'Віртуальна реальність', 'VR клуб'],
   themeColor: '#321856',
-  // metadataBase: new URL('https://wow-vr.lt'),
+  metadataBase: new URL('https://www.quantumvr.club'),
   openGraph: {
     title: 'QuantumVR | Віртуальна реальність в Києві',
     description:
       'Зануртеся в світ нескінченних вражень в QuantumVR, де Віртуальна Реальність зустрічає душу Києва. Випустіть ексцитацію за допомогою захоплюючих симуляцій, мультиплеєрних ігор та футуристичних пригод.',
-    // url: 'https://wow-wr.lt',
+    url: 'https://www.quantumvr.club',
     siteName: 'QuantumVR | Віртуальна реальність в Києві',
     images: [
       {
@@ -38,12 +38,12 @@ const enMetadata = {
     'Dive into a realm of limitless experiences at QuantumVR, where Virtual Reality meets the soul of Kiev. Unleash excitement with captivating simulations, multiplayer games, and futuristic adventures. ',
   keywords: ['QuantumVR', 'Virtual Reality', 'VR Club'],
   themeColor: '#321856',
-  // metadataBase: new URL('https://wow-vr.lt'),
+  metadataBase: new URL('https://www.quantumvr.club/en'),
   openGraph: {
     title: 'QuantumVR | Virtual Reality in Kiev',
     description:
       'Dive into a realm of limitless experiences at QuantumVR, where Virtual Reality meets the soul of Kiev. Unleash excitement with captivating simulations, multiplayer games, and futuristic adventures. ',
-    // url: 'https://wow-wr.lt',
+    url: 'https://www.quantumvr.club',
     siteName: 'QuantumVR | Virtual Reality in Kiev',
     images: [
       {
@@ -67,12 +67,12 @@ const ruMetadata = {
     'Окунитесь в мир безграничных впечатлений в QuantumVR, где Виртуальная Реальность встречает душу Киева. Разгорите волнение с захватывающими симуляциями, многопользовательскими играми и футуристическими приключениями.',
   keywords: ['QuantumVR', 'Виртуальная реальность', 'VR клуб'],
   themeColor: '#321856',
-  // metadataBase: new URL('https://wow-vr.lt'),
+  metadataBase: new URL('https://www.quantumvr.club/ru'),
   openGraph: {
     title: 'QuantumVR | Виртуальная реальность в Киеве',
     description:
       'Окунитесь в мир безграничных впечатлений в QuantumVR, где Виртуальная Реальность встречает душу Киева. Разгорите волнение с захватывающими симуляциями, многопользовательскими играми и футуристическими приключениями.',
-    // url: 'https://wow-wr.lt',
+    url: 'https://www.quantumvr.club',
     siteName: 'QuantumVR | Виртуальная реальность в Киеве',
     images: [
       {

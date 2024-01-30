@@ -17,7 +17,7 @@ export default function Socials() {
     >
       <IconButton
         component='a'
-        // href='https://www.instagram.com/wowvr.lt'
+        href='https://www.instagram.com/quantum_vr'
         target='_blank'
         referrerPolicy='no-referrer'
         sx={{
@@ -28,7 +28,7 @@ export default function Socials() {
       >
         <Image src='/socials/instagram.svg' width={35} height={35} alt='' />
       </IconButton>
-      <IconButton
+      {/* <IconButton
         component='a'
         // href='https://www.facebook.com/profile.php?id=61552966916997'
         target='_blank'
@@ -40,8 +40,8 @@ export default function Socials() {
         }}
       >
         <Image src='/socials/facebook.svg' width={35} height={35} alt='' />
-      </IconButton>
-      <IconButton
+      </IconButton> */}
+      {/* <IconButton
         component='a'
         // href='https://www.tiktok.com/@wowvr.vilnius'
         target='_blank'
@@ -53,7 +53,7 @@ export default function Socials() {
         }}
       >
         <Image src='/socials/tiktok.svg' width={35} height={35} alt='' />
-      </IconButton>
+      </IconButton> */}
     </Box>
   )
 }

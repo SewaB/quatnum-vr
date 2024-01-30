@@ -63,7 +63,10 @@ export default function NavbarContainer({ content, locale }) {
       <List sx={{ p: 0 }}>
         {navitems.map((item) => (
           <ListItem key={item.title} disablePadding>
-            <ListItemButton sx={{ color: '#fff' }} href={'#' + item.id}>
+            <ListItemButton
+              sx={{ color: '#fff', py: 0.75 }}
+              href={'#' + item.id}
+            >
               <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
