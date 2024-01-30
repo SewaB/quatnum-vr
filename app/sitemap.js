@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      // url: 'https://wow-vr.lt',
+      url: 'https://www.quantumvr.club',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1
