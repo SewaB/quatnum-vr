@@ -132,6 +132,10 @@ export default function RootLayout({ children, params }) {
           href='https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'
           rel='stylesheet'
         />
+        <meta
+          name='google-site-verification'
+          content='ZWHy5zCYdfrt8SdLkIOOnvYYWv4oh5VsOFFdEX8DKv8'
+        />
       </head>
       <body>
         {children}
