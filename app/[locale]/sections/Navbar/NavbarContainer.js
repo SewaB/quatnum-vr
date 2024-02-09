@@ -239,7 +239,7 @@ export default function NavbarContainer({ content, locale }) {
             >
               <Typography
                 component='a'
-                href='tel:38000000'
+                href='tel:380988417587'
                 sx={{
                   display: { xs: 'none', sm: 'flex' },
                   gap: '0.5rem',
@@ -250,7 +250,7 @@ export default function NavbarContainer({ content, locale }) {
                 }}
               >
                 <CallIcon fontSize='small' />
-                +380 00 00 0 000
+                +380 988 417 587
               </Typography>
               <Button
                 href='#booking'

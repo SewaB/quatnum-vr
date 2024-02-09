@@ -98,11 +98,8 @@ export default function Footer() {
             <CallIcon />
             <div>
               <Typography>{t('phone')}</Typography>
-              <Typography
-                component='a'
-                //</div>href='tel:37062264360'
-              >
-                <b>+380 00 00 0 000</b>
+              <Typography component='a' href='tel:380988417587'>
+                <b>+380 988 417 587</b>
               </Typography>
             </div>
           </Box>
