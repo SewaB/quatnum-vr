@@ -108,10 +108,16 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <head>
-        {/* Google tag (gtag.js) */}
-        {/* <Script
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'
+          rel='stylesheet'
+        />
+
+        <Script
           async
-          src='https://www.googletagmanager.com/gtag/js?id=AW-11392804385'
+          src='https://www.googletagmanager.com/gtag/js?id=AW-16457292604'
         />
         <Script
           id='ga-tracking'
@@ -121,20 +127,9 @@ export default function RootLayout({ children, params }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
             
-              gtag('config', 'AW-11392804385');
+              gtag('config', 'AW-16457292604');
             `
           }}
-        /> */}
-
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'
-          rel='stylesheet'
-        />
-        <meta
-          name='google-site-verification'
-          content='ZWHy5zCYdfrt8SdLkIOOnvYYWv4oh5VsOFFdEX8DKv8'
         />
       </head>
       <body>
