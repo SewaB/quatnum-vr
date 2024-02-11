@@ -131,6 +131,23 @@ export default function RootLayout({ children, params }) {
             `
           }}
         />
+
+        <Script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-N9NJN11996'
+        />
+        <Script
+          id='gtag-tracking'
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-N9NJN11996');
+            `
+          }}
+        />
       </head>
       <body>
         {children}
