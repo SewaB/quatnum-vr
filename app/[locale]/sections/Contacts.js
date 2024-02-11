@@ -65,7 +65,7 @@ export default function Footer() {
             <div>
               <Typography>{t('workingHours')}</Typography>
               <Typography>
-                <b>11:00-23:00</b>
+                <b>11:00-22:00</b>
               </Typography>
             </div>
           </Box>
@@ -108,7 +108,7 @@ export default function Footer() {
             <div>
               <Typography>{t('email')}</Typography>
               <Typography component='a' href='mailto:quantumvr24@gmail.com'>
-                <b>quantumvr@gmail.com</b>
+                <b>quantumvr24@gmail.com</b>
               </Typography>
             </div>
           </Box>
