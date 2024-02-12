@@ -114,7 +114,6 @@ export default function RootLayout({ children, params }) {
           href='https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'
           rel='stylesheet'
         />
-
         <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=AW-16457292604'
@@ -131,7 +130,6 @@ export default function RootLayout({ children, params }) {
             `
           }}
         />
-
         <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=G-N9NJN11996'
@@ -148,7 +146,6 @@ export default function RootLayout({ children, params }) {
             `
           }}
         />
-
         <Script
           id='fb-pixel'
           strategy='afterInteractive'
@@ -167,12 +164,11 @@ export default function RootLayout({ children, params }) {
           `
           }}
         />
-
         <noscript>
           <img
             height='1'
             width='1'
-            style='display:none'
+            style={{ display: 'none' }}
             src='https://www.facebook.com/tr?id=352622641061744&ev=PageView&noscript=1'
           />
         </noscript>
