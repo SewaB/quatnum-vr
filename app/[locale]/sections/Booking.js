@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 
-export default function Booking({ title }) {
+export default function Booking({ title, isBooking }) {
   return (
     <Box component='section' id='booking' className='fade-section'>
       <Image
@@ -22,6 +22,7 @@ export default function Booking({ title }) {
         disableGutters={true}
         sx={{
           py: { xs: 6, md: 12 },
+          pt: isBooking ? { xs: 15, md: 18 } : null,
           color: '#fff',
           position: 'relative',
           fontFamily: '"Roboto","Helvetica","Arial",sans-serif'
@@ -31,14 +32,16 @@ export default function Booking({ title }) {
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            mb: { xs: '1rem', sm: '2rem' }
+            mb: isBooking ? null : { xs: '1rem', sm: '2rem' }
           }}
         >
           <Typography
             variant='h6'
             sx={{
               fontSize: { xs: '1.8rem', md: ' 2rem' },
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              textAlign: 'center',
+              lineHeight: isBooking ? '1.4' : null
             }}
           >
             {title}

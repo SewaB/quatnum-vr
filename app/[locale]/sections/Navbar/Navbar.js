@@ -2,7 +2,7 @@ import NavbarContainer from './NavbarContainer'
 
 import { useTranslations, useLocale } from 'next-intl'
 
-export default function Navbar() {
+export default function Navbar({ isBooking }) {
   const t = useTranslations('navbar')
   const locale = useLocale()
 
@@ -17,5 +17,7 @@ export default function Navbar() {
     games: t('games')
   }
 
-  return <NavbarContainer content={content} locale={locale} />
+  return (
+    <NavbarContainer content={content} locale={locale} isBooking={isBooking} />
+  )
 }

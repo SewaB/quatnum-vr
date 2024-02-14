@@ -101,7 +101,9 @@
     "buy": "Купити"
   },
   "booking": {
-    "title": "Бронювання"
+    "title": "Бронювання",
+    "singlePageTitle": "Забронюй свій час гри у Києві",
+    "singlePageTitleSub": "прямо зараз!"
   },
   "reviews": {
     "title": "Відгуки наших клієнтів",

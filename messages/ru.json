@@ -101,7 +101,9 @@
     "buy": "Купить"
   },
   "booking": {
-    "title": "Бронирование"
+    "title": "Бронирование",
+    "singlePageTitle": "Забронируй своё время игры в Киеве",
+    "singlePageTitleSub": "прямо сейчас!"
   },
 
   "reviews": {

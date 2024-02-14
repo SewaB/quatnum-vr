@@ -101,7 +101,9 @@
     "buy": "Buy"
   },
   "booking": {
-    "title": "Booking"
+    "title": "Booking",
+    "singlePageTitle": "Book your game time in Kyiv",
+    "singlePageTitleSub": "right now!"
   },
   "reviews": {
     "title": "Our Clients Reviews",

@@ -26,9 +26,10 @@ import Link from 'next-intl/link'
 import CallIcon from '@mui/icons-material/Call'
 import Typography from '@mui/material/Typography'
 
-export default function NavbarContainer({ content, locale }) {
+export default function NavbarContainer({ content, locale, isBooking }) {
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
+  console.log(isBooking)
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
   }
@@ -136,11 +137,11 @@ export default function NavbarContainer({ content, locale }) {
           backdropFilter: 'blur(4px)'
         }}
       >
-        <Container maxWidth='xl' disableGutters={true}>
+        <Container maxWidth={isBooking ? 'lg' : 'xl'} disableGutters={true}>
           <Toolbar
             sx={{
               display: 'flex',
-              justifyContent: 'center',
+              justifyContent: isBooking ? 'flex-start' : 'center',
               '& a': {
                 fontSize: '1rem'
               }
@@ -148,44 +149,47 @@ export default function NavbarContainer({ content, locale }) {
           >
             <Box
               sx={{
-                mr: 'auto',
+                mr: isBooking ? 2 : 'auto',
                 display: 'flex'
               }}
             >
-              <Box
-                sx={{
-                  display: {
-                    xs: 'flex',
-                    sm: 'none',
+              {!isBooking && (
+                <Box
+                  sx={{
+                    display: {
+                      xs: 'flex',
+                      sm: 'none'
+                    },
                     gap: '0.5rem',
                     alignItems: 'center'
-                  }
-                }}
-              >
-                <IconButton
-                  color='inherit'
-                  aria-label='open drawer'
-                  edge='start'
-                  onClick={handleDrawerToggle}
+                  }}
                 >
-                  <MenuIcon />
-                </IconButton>
-                <Image
-                  src='/logo.svg'
-                  priority
-                  quality={100}
-                  width={120}
-                  height={38}
-                  alt=''
-                  style={{ objectFit: 'contain' }}
-                />
-              </Box>
+                  <IconButton
+                    color='inherit'
+                    aria-label='open drawer'
+                    edge='start'
+                    onClick={handleDrawerToggle}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+
+                  <Image
+                    src='/logo.svg'
+                    priority
+                    quality={100}
+                    width={120}
+                    height={38}
+                    alt=''
+                    style={{ objectFit: 'contain' }}
+                  />
+                </Box>
+              )}
 
               <Button
-                href='#header'
+                href={isBooking ? '/' : '#header'}
                 variant='text'
                 sx={{
-                  display: { xs: 'none', sm: 'flex' },
+                  display: isBooking ? 'flex' : { xs: 'none', sm: 'flex' },
                   p: 0,
                   mr: 1
                 }}
@@ -201,35 +205,36 @@ export default function NavbarContainer({ content, locale }) {
                 />
               </Button>
 
-              <Box
-                sx={{
-                  display: { xs: 'none', md: 'flex' }
-                }}
-              >
-                <NavbarItem link='#about' mainColor hidden>
-                  {content.about}
-                </NavbarItem>
-                <NavbarItem link='#price' mainColor>
-                  {content.price}
-                </NavbarItem>
-                <NavbarItem link='#price' mainColor>
-                  {content.event}
-                </NavbarItem>
-                <NavbarItem link='#price' mainColor>
-                  {content.certificate}
-                </NavbarItem>
-                <NavbarItem link='#games' mainColor hidden>
-                  {content.games}
-                </NavbarItem>
-                <NavbarItem link='#faq' mainColor hidden>
-                  {content.faq}
-                </NavbarItem>
-                <NavbarItem link='#contacts' mainColor>
-                  {content.contacts}
-                </NavbarItem>
-              </Box>
+              {!isBooking && (
+                <Box
+                  sx={{
+                    display: { xs: 'none', md: 'flex' }
+                  }}
+                >
+                  <NavbarItem link='#about' mainColor hidden>
+                    {content.about}
+                  </NavbarItem>
+                  <NavbarItem link='#price' mainColor>
+                    {content.price}
+                  </NavbarItem>
+                  <NavbarItem link='#price' mainColor>
+                    {content.event}
+                  </NavbarItem>
+                  <NavbarItem link='#price' mainColor>
+                    {content.certificate}
+                  </NavbarItem>
+                  <NavbarItem link='#games' mainColor hidden>
+                    {content.games}
+                  </NavbarItem>
+                  <NavbarItem link='#faq' mainColor hidden>
+                    {content.faq}
+                  </NavbarItem>
+                  <NavbarItem link='#contacts' mainColor>
+                    {content.contacts}
+                  </NavbarItem>
+                </Box>
+              )}
             </Box>
-
             <Box
               sx={{
                 display: 'flex',
@@ -237,65 +242,69 @@ export default function NavbarContainer({ content, locale }) {
                 gap: { xs: '0.9rem', lg: '1.5rem' }
               }}
             >
-              <Typography
-                component='a'
-                href='tel:380988417587'
-                sx={{
-                  display: { xs: 'none', sm: 'flex' },
-                  gap: '0.5rem',
-                  alignItems: 'center',
-                  '&:hover': {
-                    color: '#ec318a'
-                  }
-                }}
-              >
-                <CallIcon fontSize='small' />
-                +380 988 417 587
-              </Typography>
-              <Button
-                href='#booking'
-                sx={{
-                  color: '#000',
-                  textTransform: 'capitalize',
-                  backgroundColor: '#fcd222',
-                  fontWeight: 'bold',
-                  position: 'relative',
-                  borderRadius: 0,
-                  py: { xs: 0.5, sm: 0.75 },
-                  px: 2,
-                  minWidth: '140px',
-                  clipPath:
-                    'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)',
+              {!isBooking && (
+                <>
+                  <Typography
+                    component='a'
+                    href='tel:380988417587'
+                    sx={{
+                      display: { xs: 'none', sm: 'flex' },
+                      gap: '0.5rem',
+                      alignItems: 'center',
+                      '&:hover': {
+                        color: '#ec318a'
+                      }
+                    }}
+                  >
+                    <CallIcon fontSize='small' />
+                    +380 988 417 587
+                  </Typography>
+                  <Button
+                    href='#booking'
+                    sx={{
+                      color: '#000',
+                      textTransform: 'capitalize',
+                      backgroundColor: '#fcd222',
+                      fontWeight: 'bold',
+                      position: 'relative',
+                      borderRadius: 0,
+                      py: { xs: 0.5, sm: 0.75 },
+                      px: 2,
+                      minWidth: '140px',
+                      clipPath:
+                        'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)',
 
-                  //
-                  // '&:after': {
-                  //   content: "''",
-                  //   position: 'absolute',
-                  //   backgroundColor: 'red',
-                  //   transform: 'translate(10px, -10px)',
-                  //   width: '100%',
-                  //   height: '100%',
-                  //   opacity: 1,
-                  //   clipPath:
-                  //     'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)'
-                  // },
+                      //
+                      // '&:after': {
+                      //   content: "''",
+                      //   position: 'absolute',
+                      //   backgroundColor: 'red',
+                      //   transform: 'translate(10px, -10px)',
+                      //   width: '100%',
+                      //   height: '100%',
+                      //   opacity: 1,
+                      //   clipPath:
+                      //     'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)'
+                      // },
 
-                  '&:hover': {
-                    color: '#fff',
-                    backgroundColor: '#ec318a'
-                    // boxShadow: '0px 0px 2rem 0px #fff',
-                    // '&:after': {
-                    //   opacity: 1
-                    // }
-                  }
-                }}
-              >
-                {content.book}
-              </Button>
+                      '&:hover': {
+                        color: '#fff',
+                        backgroundColor: '#ec318a'
+                        // boxShadow: '0px 0px 2rem 0px #fff',
+                        // '&:after': {
+                        //   opacity: 1
+                        // }
+                      }
+                    }}
+                  >
+                    {content.book}
+                  </Button>
+                </>
+              )}
 
               <Box
                 sx={{
-                  display: { xs: 'none', sm: 'flex' }
+                  display: isBooking ? 'flex' : { xs: 'none', sm: 'flex' }
                 }}
               >
                 <Select
@@ -305,7 +314,9 @@ export default function NavbarContainer({ content, locale }) {
                       disableScrollLock: true,
                       sx: {
                         '.MuiPaper-root': {
-                          backgroundColor: 'rgba(0,0,0,0.5)'
+                          backgroundColor: isBooking
+                            ? '#000'
+                            : 'rgba(0,0,0,0.5)'
                         }
                       }
                     }
@@ -328,17 +339,17 @@ export default function NavbarContainer({ content, locale }) {
                   }}
                 >
                   <MenuItem value='ua'>
-                    <Link href='/' locale='ua'>
+                    <Link href={isBooking ? '/booking' : '/'} locale='ua'>
                       <NavbarItem lang>UA</NavbarItem>
                     </Link>
                   </MenuItem>
                   <MenuItem value='en'>
-                    <Link href='/' locale='en'>
+                    <Link href={isBooking ? '/booking' : '/'} locale='en'>
                       <NavbarItem lang>EN</NavbarItem>
                     </Link>
                   </MenuItem>
                   <MenuItem value='ru'>
-                    <Link href='/' locale='ru'>
+                    <Link href={isBooking ? '/booking' : '/'} locale='ru'>
                       <NavbarItem lang>RU</NavbarItem>
                     </Link>
                   </MenuItem>
