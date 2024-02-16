@@ -1,7 +1,5 @@
 import Navbar from '../sections/Navbar/Navbar'
 import Booking from '../sections/Booking'
-import FAQ from '../sections/FAQ'
-import Contacts from '../sections/Contacts'
 import Footer from '../sections/Footer'
 
 import { useTranslations } from 'next-intl'

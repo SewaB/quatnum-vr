@@ -29,7 +29,6 @@ import Typography from '@mui/material/Typography'
 export default function NavbarContainer({ content, locale, isBooking }) {
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
-  console.log(isBooking)
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
   }
