@@ -114,6 +114,12 @@ export default function RootLayout({ children, params }) {
           href='https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'
           rel='stylesheet'
         />
+
+        <link
+          href='https://storage.googleapis.com/booking-widget/static/css/main.css'
+          rel='stylesheet'
+        />
+
         <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=AW-16457292604'
@@ -173,7 +179,88 @@ export default function RootLayout({ children, params }) {
           />
         </noscript>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          async
+          src='https://storage.googleapis.com/booking-widget/static/js/main.js'
+        />
+        <Script
+          defer
+          strategy='beforeInteractive'
+          type='text/javascript'
+          id='calendar-widget'
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.bookingCompanyIds = ["-NpDsJV2ErBgnP7o2fWm"];
+              window.bookingWidgetLang = 'ua';
+              window.bookingWidgetTheme = 'transparent';
+              window.bookingWidgetStyles = {
+                container: {
+                  minHeight:'unset'
+                },
+                booking: {
+                  border: 'unset'
+                },
+                calendar_week: {
+                  color:'#61efff'
+                },
+                widget_calendar_day: {
+                  backdropFilter:'blur(10px)',
+                  '& span': {
+                    color:'#61efff!important'
+                  }
+                },
+                calendar_header_title: {
+                  color:'#61efff'
+                },
+                calendar_header_button: {
+                  color:'#61efff',
+                  fill: '#61efff'
+                },
+                widget_calendar_day_span: {
+                  wordBreak: 'break-all'
+                },
+                modal_minus: {
+                  '&:before': {
+                    backgroundColor:"#ec318a"
+                  },
+                },
+                modal_plus: {
+                  '&:before': {
+                    backgroundColor:"#ec318a"
+                  },
+                  '&:after': {
+                    backgroundColor:"#ec318a"
+                  }
+                },
+                modal_button: {
+                  clipPath:
+                  'polygon(0 0, 92% 0, 100% 30%, 100% 100%, 80% 100%, 80% 90%, 70% 90%, 70% 100%, 8% 100%, 0 70%)',
+                  textTransform: 'capitalize',
+                  backgroundColor: '#fcd222',
+                  borderRadius: 0,
+                  border:0,
+                  fontWeight: 'bold',
+                  minWidth: '140px',
+                  color: '#000',
+                  '&:hover': {
+                    color: '#fff',
+                    backgroundColor: '#ec318a',
+                  }
+                },
+                modal_recall: {
+                  '& .widget_recall-checkbox>input:checked+span:before':{
+                    backgroundColor:'#ec318a!important',
+                    borderColor:'#ec318a!important',
+                  }
+                }
+              
+              }
+            `
+          }}
+        />
+      </body>
     </html>
   )
 }
