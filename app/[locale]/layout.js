@@ -189,7 +189,6 @@ export default function RootLayout({ children, params }) {
           defer
           strategy='beforeInteractive'
           type='text/javascript'
-          id='calendar-widget'
           dangerouslySetInnerHTML={{
             __html: `
             window.bookingCompanyIds = ["-NpDsJV2ErBgnP7o2fWm"];
