@@ -140,7 +140,7 @@ export default function Price({ content }) {
                   >
                     350
                   </Typography> */}
-                  300 {content.uah}
+                  350 {content.uah}
                 </Typography>
               </Box>
               <Box>
@@ -198,7 +198,7 @@ export default function Price({ content }) {
                   >
                     400
                   </Typography> */}
-                  350 {content.uah}
+                  400 {content.uah}
                 </Typography>
               </Box>
             </Item>
@@ -297,7 +297,7 @@ export default function Price({ content }) {
                 >
                   2000
                 </Typography> */}
-                1500 {content.uah}
+                1600 {content.uah}
               </Typography>
             </Item>
           </Grid>
@@ -369,7 +369,7 @@ export default function Price({ content }) {
                   >
                     250
                   </Typography> */}
-                  200 {content.uah}
+                  250 {content.uah}
                 </Typography>
               </Box>
               <Box>
@@ -427,7 +427,7 @@ export default function Price({ content }) {
                   >
                     300
                   </Typography> */}
-                  250 {content.uah}
+                  300 {content.uah}
                 </Typography>
               </Box>
             </Item>
@@ -512,7 +512,7 @@ export default function Price({ content }) {
                 >
                   400
                 </Typography> */}
-                350 {content.uah}
+                400 {content.uah}
               </Typography>
             </Item>
           </Grid>
