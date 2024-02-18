@@ -104,10 +104,11 @@ export default function Price({ content }) {
                     gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
                     fontWeight: 'bold',
-                    color: '#ec318a'
+                    color: '#ec318a',
+                    justifyContent: 'center'
                   }}
                 >
-                  <Typography
+                  {/* <Typography
                     component='span'
                     sx={{
                       display: 'flex',
@@ -138,8 +139,8 @@ export default function Price({ content }) {
                     }}
                   >
                     350
-                  </Typography>
-                  175 {content.uah}
+                  </Typography> */}
+                  300 {content.uah}
                 </Typography>
               </Box>
               <Box>
@@ -161,10 +162,11 @@ export default function Price({ content }) {
                     gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
                     fontWeight: 'bold',
-                    color: '#ec318a'
+                    color: '#ec318a',
+                    justifyContent: 'center'
                   }}
                 >
-                  <Typography
+                  {/* <Typography
                     component='span'
                     sx={{
                       display: 'flex',
@@ -195,8 +197,8 @@ export default function Price({ content }) {
                     }}
                   >
                     400
-                  </Typography>
-                  200 {content.uah}
+                  </Typography> */}
+                  350 {content.uah}
                 </Typography>
               </Box>
             </Item>
@@ -258,11 +260,12 @@ export default function Price({ content }) {
                   gap: '1ch',
                   fontSize: { xs: '1.7rem', sm: '2rem' },
                   fontWeight: 'bold',
-                  color: '#ec318a'
+                  color: '#ec318a',
+                  justifyContent: 'center'
                 }}
               >
-                {content.from}
-                <Typography
+                {content.from}{' '}
+                {/* <Typography
                   component='span'
                   sx={{
                     display: 'flex',
@@ -293,8 +296,8 @@ export default function Price({ content }) {
                   }}
                 >
                   2000
-                </Typography>
-                1000 {content.uah}
+                </Typography> */}
+                1500 {content.uah}
               </Typography>
             </Item>
           </Grid>
@@ -330,10 +333,11 @@ export default function Price({ content }) {
                     gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
                     fontWeight: 'bold',
-                    color: '#ec318a'
+                    color: '#ec318a',
+                    justifyContent: 'center'
                   }}
                 >
-                  <Typography
+                  {/* <Typography
                     component='span'
                     sx={{
                       display: 'flex',
@@ -364,8 +368,8 @@ export default function Price({ content }) {
                     }}
                   >
                     250
-                  </Typography>
-                  125 {content.uah}
+                  </Typography> */}
+                  200 {content.uah}
                 </Typography>
               </Box>
               <Box>
@@ -387,10 +391,11 @@ export default function Price({ content }) {
                     gap: '1ch',
                     fontSize: { xs: '1.7rem', sm: '2rem' },
                     fontWeight: 'bold',
-                    color: '#ec318a'
+                    color: '#ec318a',
+                    justifyContent: 'center'
                   }}
                 >
-                  <Typography
+                  {/* <Typography
                     component='span'
                     sx={{
                       display: 'flex',
@@ -421,8 +426,8 @@ export default function Price({ content }) {
                     }}
                   >
                     300
-                  </Typography>
-                  150 {content.uah}
+                  </Typography> */}
+                  250 {content.uah}
                 </Typography>
               </Box>
             </Item>
@@ -471,10 +476,11 @@ export default function Price({ content }) {
                   gap: '1ch',
                   fontSize: { xs: '1.7rem', sm: '2rem' },
                   fontWeight: 'bold',
-                  color: '#ec318a'
+                  color: '#ec318a',
+                  justifyContent: 'center'
                 }}
               >
-                <Typography
+                {/* <Typography
                   component='span'
                   sx={{
                     display: 'flex',
@@ -505,8 +511,8 @@ export default function Price({ content }) {
                   }}
                 >
                   400
-                </Typography>
-                200 {content.uah}
+                </Typography> */}
+                350 {content.uah}
               </Typography>
             </Item>
           </Grid>
