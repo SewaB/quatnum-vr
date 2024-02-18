@@ -48,7 +48,7 @@ export default function Price({ content }) {
             {content.title}
           </Typography>
 
-          <Typography
+          {/* <Typography
             sx={{
               mt: 3,
               fontSize: '1.4rem',
@@ -67,7 +67,7 @@ export default function Price({ content }) {
             }}
           >
             {content.saleText}
-          </Typography>
+          </Typography> */}
           <Typography sx={{ mt: 3, fontSize: '1.2rem', color: '#bdbdbd' }}>
             {content.subtitle}
           </Typography>
